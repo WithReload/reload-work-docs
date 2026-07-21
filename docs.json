@@ -7,7 +7,10 @@
     "light": "#22C55E",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/images/android-chrome-512x512.png",
+    "dark": "/images/android-chrome-512x512.png"
+  },
   "navigation": {
     "pages": [
       {
@@ -125,8 +128,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg",
+    "light": "/images/logo-full-light.svg",
+    "dark": "/images/logo-full-dark.svg",
     "href": "https://reload.work"
   },
   "navbar": {
