@@ -28,6 +28,29 @@
         ]
       },
       {
+        "group": "Use cases",
+        "pages": [
+          "use-cases/overview",
+          "use-cases/accounting-firm",
+          "use-cases/barbershop",
+          "use-cases/content-creator",
+          "use-cases/dev-design-studio",
+          "use-cases/ecommerce-store",
+          "use-cases/fitness-studio",
+          "use-cases/freelancer-consultant",
+          "use-cases/hair-salon",
+          "use-cases/indie-builder",
+          "use-cases/law-firm",
+          "use-cases/marketing-agency",
+          "use-cases/real-estate-agency",
+          "use-cases/restaurant-cafe",
+          "use-cases/side-project-builder",
+          "use-cases/solo-founder",
+          "use-cases/startup-team",
+          "use-cases/vc-firm"
+        ]
+      },
+      {
         "group": "Working together",
         "pages": [
           "channels",
