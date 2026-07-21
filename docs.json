@@ -4,8 +4,7 @@
   "name": "Reload",
   "colors": {
     "primary": "#E9E2D5",
-    "light": "#000000",
-    "dark": "#E9E2D5"
+    "light": "#000000"
   },
   "favicon": {
     "light": "/images/android-chrome-512x512.png",
