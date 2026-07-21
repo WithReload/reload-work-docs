@@ -1,0 +1,110 @@
+---
+title: "Security"
+description: "Protect your account with two-factor authentication, and see and sign out every device signed in to you."
+---
+
+Your security settings are personal to you. They live in the same place whatever your role, so you can protect your own account even if the workspace's admin settings are locked to you.
+
+Open [app.reload.work](https://app.reload.work), go to **Settings**, and choose **Security** in the Account group. From here you can turn on two-factor authentication and review the devices signed in to your account.
+
+<Note>
+Every member has their own Security settings. Two-factor and active sessions are always available to you, even when other settings sections are read-only for your role. See [Members and roles](/members-and-roles).
+</Note>
+
+## Turn on two-factor authentication
+
+Two-factor authentication adds a second step at sign-in. After your password, you enter a short code from an authenticator app on your phone, so a stolen password alone is not enough to get in.
+
+You will need an authenticator app on your phone first. Any standard one works.
+
+<Steps>
+  <Step title="Start the setup">
+    In **Security**, find the **Two-factor authentication** row and select **Enable**.
+  </Step>
+  <Step title="Scan the code">
+    A setup screen shows a QR code. Open your authenticator app and scan it. If you cannot scan, copy the manual setup key shown next to the code and enter it in the app by hand.
+  </Step>
+  <Step title="Enter the 6-digit code">
+    Your app now shows a rotating 6-digit code for Reload. Type it into the **Authenticator code** field and select **Verify code**.
+  </Step>
+  <Step title="Save your backup codes">
+    Once verified, you are shown a set of one-time backup codes. Save them somewhere safe, then select **Done**.
+  </Step>
+</Steps>
+
+<Warning>
+Your backup codes are shown once, right after you turn on two-factor. Copy them and keep them somewhere safe before you close the screen. They are the way back into your account if you lose your phone, and Reload cannot show them to you again later. You can always generate a fresh set from **Manage**.
+</Warning>
+
+## Signing in from now on
+
+The next time you sign in, enter your password as usual. Then Reload asks for the current 6-digit code from your authenticator app to finish. If you do not have your phone, use one of the backup codes you saved. Each backup code works once.
+
+## Manage or turn off two-factor
+
+Once two-factor is on, the row shows an **On** badge and a **Manage** button. Select **Manage** to:
+
+- See your authenticator factors and when each was added.
+- See how many backup codes you have left.
+- **Regenerate backup codes** to replace your old set with a new one. This invalidates the previous codes, so save the new ones right away.
+- **Turn off** two-factor if you no longer want a second step at sign-in.
+
+<Tip>
+If you run low on backup codes, or think an old set may have been seen by someone else, regenerate them. The old codes stop working the moment you do.
+</Tip>
+
+## See and sign out your devices
+
+Under **Sessions and devices**, Security lists every device currently signed in to your account. Each row shows the device (like Chrome on macOS), where it signed in from, and when it was last active. Your current device is marked **This device**.
+
+This is how you check nothing unexpected is signed in as you, and shut it down if it is.
+
+- Select **Revoke** on any other device to sign it out. It loses access on its next request.
+- Select **Sign out everywhere else** to end every session except the one you are using now.
+
+<Note>
+You cannot sign out the device you are currently using, and **Sign out everywhere else** always keeps your current session. So you never lock yourself out by cleaning up your other sessions.
+</Note>
+
+## Keeping your account safe
+
+A few habits go a long way:
+
+- Turn on two-factor authentication and keep your backup codes somewhere safe.
+- Review your active sessions now and then, and sign out anything you do not recognise.
+- If you sign in on a shared or public computer, use **Sign out everywhere else** afterwards.
+- Confirm your email shows a **Verified** badge on your [Profile](/workspace-settings), so account emails reach you.
+
+## Frequently asked
+
+<AccordionGroup>
+  <Accordion title="I lost my phone. How do I get back in?">
+    Sign in with your password, then enter one of the backup codes you saved when you turned on two-factor, in place of the app code. Once you are in, open **Security**, select **Manage**, and either regenerate your backup codes or turn two-factor off and set it up again with your new phone.
+  </Accordion>
+  <Accordion title="Do I have to use two-factor?">
+    It is optional, and any member can turn it on for their own account. It is the single best step you can take to protect your sign-in, so we recommend it.
+  </Accordion>
+  <Accordion title="I see a device I do not recognise.">
+    Select **Revoke** on that row to sign it out immediately, or **Sign out everywhere else** to clear every other session at once. Then change your password and turn on two-factor if you have not already.
+  </Accordion>
+  <Accordion title="Where do I change my password or profile?">
+    Your name, job title, bio, and email live under **Settings**, then **Profile**. See [Workspace and account settings](/workspace-settings).
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Members and roles" icon="users" href="/members-and-roles">
+    See what each role can do and how access is managed across your workspace.
+  </Card>
+  <Card title="Workspace and account settings" icon="gear" href="/workspace-settings">
+    Edit your profile, notifications, appearance, and workspace details.
+  </Card>
+  <Card title="Connecting tools" icon="plug" href="/connecting-tools">
+    Connect outside apps with least access, and keep a hand on what agents can do.
+  </Card>
+  <Card title="Troubleshooting" icon="life-ring" href="/troubleshooting">
+    Fix common problems with signing in and your workspace.
+  </Card>
+</CardGroup>

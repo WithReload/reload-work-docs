@@ -1,0 +1,134 @@
+---
+title: "Scheduled routines"
+description: "Set your agents to run recurring work on a schedule, so the things that happen every day, week, or month happen on their own."
+---
+
+A routine is agent work that runs on a schedule. Instead of asking an agent to do the same thing every morning, you set it up once and it runs on its own. Think a daily summary, a weekly report, or an hourly check on something that matters.
+
+Every routine belongs to one agent and carries a simple instruction: what to do each time it runs. You stay in control the whole way. Pause it, change when it runs, or delete it whenever you want.
+
+## Where your routines live
+
+<CardGroup cols={3}>
+  <Card title="Routines" icon="clock" href="/routines">
+    The management home. Every routine in one list, with its status, cadence, and controls.
+  </Card>
+  <Card title="Calendar" icon="calendar" href="/calendar-notes-wiki">
+    The time view. See when routines are set to run across the days and weeks ahead.
+  </Card>
+  <Card title="Overview" icon="house">
+    Your home page shows the routines coming up next under today's schedule.
+  </Card>
+</CardGroup>
+
+## Create a routine
+
+Open **Routines** from the sidebar and choose **New routine**. You need at least one agent in your workspace first, since every routine runs on an agent.
+
+<Steps>
+  <Step title="Pick the agent">
+    Choose which agent runs the routine. It runs as that agent, using its tools and its place in your team.
+  </Step>
+  <Step title="Name it">
+    Give it a short name you will recognize later, like "Daily digest" or "Monday report".
+  </Step>
+  <Step title="Write the instruction">
+    Say what the agent should do each time it runs, in plain language. This is the same as asking the agent to do the work, except it happens on schedule. Be clear and specific so every run does the right thing.
+  </Step>
+  <Step title="Set the schedule">
+    Choose how often it runs. Pick a friendly option or set an exact time. See the cadence options below.
+  </Step>
+  <Step title="Create it">
+    Choose **Create routine**. It goes live right away and will run at the next scheduled time.
+  </Step>
+</Steps>
+
+<Tip>
+  You can also set up a routine from an agent's own page, under its schedule. It works the same way and is handy when you are already looking at the agent you want to put on a schedule.
+</Tip>
+
+## Choose how often it runs
+
+When you set the schedule, start with a friendly option and adjust the details. You can run a routine:
+
+- **Every hour**
+- **Every day**, at a time you pick
+- **Every weekday**, Monday to Friday, at a set time
+- **Every week**, on a day and time you choose
+- **Every month**, on a day of the month
+- **Every so many minutes or hours**, a repeating interval
+- **Once**, a single run at a specific date and time
+- **Custom**, an exact schedule expression if you already know the one you want
+
+As you set the schedule, you see a preview of the next few times it will run, so you can confirm it is what you meant before saving.
+
+<Note>
+  Each run does real work and uses credits, the same as any agent task. Pick the least frequent schedule that still does the job. A routine that runs every few minutes adds up fast.
+</Note>
+
+## Decide what happens if a run is still going
+
+Sometimes a run takes longer than the gap until the next one is due. You can choose what happens when a routine is scheduled to fire while its last run is still working:
+
+- **Skip this run.** Leave the current run alone and wait for the next scheduled time. This is the default and the safest choice.
+- **Queue the run.** Wait for the current run to finish, then run.
+- **Replace the running one.** Stop what is running and start fresh.
+
+If you are not sure, leave it on skip. It keeps a slow run from piling up on itself.
+
+## Pause, edit, or delete
+
+Everything about a routine can change after you create it. From the **Routines** list you can:
+
+- **Pause or resume.** Flip the switch to pause a routine. A paused routine never runs until you resume it, and it keeps its schedule and history while it waits. Use this when you want a break without losing the setup.
+- **Edit the schedule.** Open the schedule editor to change when it runs. The next run time updates as soon as you save.
+- **Delete.** Remove a routine for good. It stops running immediately and cannot be undone. If you might want it back, pause it instead.
+
+Each routine also shows its **next** run and when it **last** ran, so you can tell at a glance what is coming and what has already happened.
+
+## See what each routine has done
+
+Every time a routine is due to run, Reload records what happened. On the **Routines** list, open a routine's runs to see its history:
+
+- **Ran.** The routine started a run at that time. Open it to see the full run and what the agent did.
+- **Skipped.** The agent was already working, so this run was skipped. You set this behavior with the "if already running" choice above.
+- **Failed.** The run could not start. The routine stays on schedule and tries again at its next run.
+
+Each entry shows when it fired and a plain note about what happened. Where a run was produced, choose **View run** to open it.
+
+## Good to know
+
+<AccordionGroup>
+  <Accordion title="Who can create and manage routines?">
+    Anyone who can add agents to the workspace can create, pause, edit, and delete routines. People with view-only access can see the schedule but not change it. See [Members and roles](/members-and-roles).
+  </Accordion>
+  <Accordion title="Do routines cost credits?">
+    Yes. A routine runs the agent, and that draws from your credits just like any other work. If your workspace runs out of credits, routines stop running until you top up, and then they pick back up on schedule. See [Credits](/credits).
+  </Accordion>
+  <Accordion title="Is there a limit on how many routines I can have?">
+    Your plan sets how many routines you can have at once. If you reach the limit, pause or delete one you no longer need, or upgrade to add more. See [Plans](/plans).
+  </Accordion>
+  <Accordion title="Can an agent schedule its own routines?">
+    Yes. Agents can set up routines for themselves as part of their work, for example to check back on something later or keep a recurring job going. When an agent does this, it tells you in the channel, and the routine shows up in your Routines list where you can pause or change it like any other.
+  </Accordion>
+  <Accordion title="Can I stop a routine without deleting it?">
+    Pause it. A paused routine keeps its schedule and history and simply does not run until you resume it. Delete only when you are sure you will not want it back.
+  </Accordion>
+</AccordionGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Tasks" icon="list-check" href="/tasks">
+    Hand one-off work to an agent instead of putting it on a schedule.
+  </Card>
+  <Card title="Calendar and notes" icon="calendar" href="/calendar-notes-wiki">
+    See your routines plotted across the days and weeks ahead.
+  </Card>
+  <Card title="Working with agents" icon="robot" href="/working-with-agents">
+    Get the most out of the teammates your routines run on.
+  </Card>
+  <Card title="Credits" icon="coins" href="/credits">
+    Understand how recurring work is metered as your agents run.
+  </Card>
+</CardGroup>

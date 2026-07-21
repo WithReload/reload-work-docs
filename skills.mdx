@@ -1,0 +1,154 @@
+---
+title: "Skills"
+description: "Give your agents reusable playbooks for doing a kind of work well, and choose which teammate gets which."
+---
+
+A skill is a playbook. It teaches an agent how to do a specific kind of work: the steps to follow, the terms to know, and the way you want it done. Turn a skill on for a teammate and it knows how to do that job whenever it comes up.
+
+Skills are reusable. Write one once, or add one from the catalog, and any of your agents can use it. They keep your teammates consistent, so the same task gets done the same way every time, no matter which agent picks it up.
+
+This page covers your Skills library, how to add skills, and how to turn them on for the agents that need them. To shape a single agent end to end, see [Customizing an agent](/customizing-agents).
+
+## Where your skills live
+
+Open the **Skills** area to see everything your workspace has. It is a two-panel view: a list of your skills on the left, and the details of the one you have selected on the right.
+
+Your skills are grouped by where they came from:
+
+- **Reload bundled.** Ready-made skills that ship with Reload. These are read only, so you can use them but not change them.
+- **Workspace.** Skills authored or brought in by your team. These are yours to edit.
+
+Filter the list from the search box at the top to find a skill by name. Select any skill to open its details.
+
+## What a skill is
+
+Select a skill to see what it does and how it behaves:
+
+- **Description.** A short line that tells an agent when to reach for this skill.
+- **Its instructions.** The full playbook, written in plain Markdown. Toggle between the readable **View** and the raw **Code** to see exactly what an agent follows.
+- **Trust.** Most skills are marked **Safe**, meaning they are instructions only. A skill marked **Includes scripts** bundles runnable steps, so you can see that up front and decide with your eyes open.
+- **Used by.** The agents that currently have this skill turned on.
+
+<Note>
+  Skills hold instructions, never secrets. Passwords and keys live with your [connected tools](/connecting-tools), which stay locked away from the skill's text.
+</Note>
+
+An agent does not carry every skill's full instructions in every conversation. It sees the short description of each skill it has, and pulls in the full playbook only when the work in front of it matches. So you can give a teammate plenty of skills without slowing it down or cluttering its replies.
+
+## Add a skill
+
+From the Skills area, open the **Add skill** menu. You have two ways to bring in a new one: add a ready-made skill from the catalog, or write your own.
+
+### Add from the catalog
+
+Reload comes with a catalog of popular, ready-made public skills you can add in one click. They cover work like reading and editing documents, spreadsheets, and slide decks, plus design and writing guidance, and more.
+
+<Steps>
+  <Step title="Open the catalog">
+    In the **Add skill** menu, choose **Browse catalog**.
+  </Step>
+  <Step title="Pick a skill">
+    Search the popular skills, then choose **Import** on the one you want. You can also paste a link to any public skill if it is not in the list.
+  </Step>
+  <Step title="Choose who gets it (optional)">
+    Set who the skill is for: nobody yet, all of your agents, or a few you pick. You can change this later, and nothing turns on until you review the skill.
+  </Step>
+  <Step title="Review before it runs">
+    An imported skill arrives as **Pending**. Open it, read the instructions, and choose **Activate skill** to make it live. Until you do, it never runs, even for agents you assigned it to.
+  </Step>
+</Steps>
+
+<Warning>
+  A skill you import brings in instructions written outside your workspace. Read them before you activate it, the same way you would read anything before letting a teammate follow it. Reload holds every imported skill as Pending until you approve it, on purpose.
+</Warning>
+
+### Write your own
+
+To capture the way your team does something, write your own skill.
+
+<Steps>
+  <Step title="Start a new skill">
+    In the **Add skill** menu, choose **Create skill**, then **Write skill instructions**.
+  </Step>
+  <Step title="Name it and describe it">
+    Give it a short name and a one-line description. The description is how an agent knows when to use it, so make it clear, like "Use when turning a meeting transcript into action items."
+  </Step>
+  <Step title="Write the playbook">
+    In the instructions box, write what the agent should do, when, and any terms it needs, using plain Markdown.
+  </Step>
+  <Step title="Create it">
+    Choose **Create skill**. It lands in your Workspace group, ready to turn on for your agents.
+  </Step>
+</Steps>
+
+<Tip>
+  Want more control while you write? The **Add skill** menu also has an advanced editor. It lets you save a skill as a draft while you shape it, or submit it for someone to approve, before it goes live. A draft stays off until you activate it.
+</Tip>
+
+## Turn skills on for your agents
+
+Adding a skill to your library does not switch it on. You choose which agents get which skills, and a skill is never on for the whole workspace at once. That way each teammate carries only the playbooks that fit its job.
+
+### From a skill
+
+On a skill's detail panel, use the **Enabled for** card:
+
+- **All my agents.** Turn the skill on for every agent you own, including ones you add later. This is available for skills you own. Turn an individual agent off below to leave it out.
+- **Specific agents.** Pick agent by agent who gets the skill.
+
+### From the enablement matrix
+
+For a bird's-eye view across your whole team, open **Enablement matrix** from the Skills header. It is a grid of your skills down the side and your agents across the top. Flip any cell to turn a skill on or off for that agent. Your own agents are yours to change; a teammate's agents show as read only.
+
+The matrix also has a **Conflicts** view. If two skills share the same name, an agent could be unsure which one to follow. Conflicts flags those so you can open each and remove the copy you do not want.
+
+### From an agent's chat
+
+While chatting with an agent, use the **Skills** control at the top of the conversation. It shows how many skills that agent has and opens a panel where you can add one from the catalog or turn one off, right where you are working.
+
+### From the agent builder
+
+When you build or edit an agent, the **Skills** section lists every skill it has enabled. Toggle them on and off there alongside the rest of its setup. See [Customizing an agent](/customizing-agents).
+
+## Skills and agents that run outside Reload
+
+Your agents can suggest bringing in a skill they think would help. When one does, the skill still arrives as Pending and waits for a person to review and turn it on. You stay in control of what your team can do.
+
+Connected agents that run outside Reload manage their own abilities, so you assign them work in channels rather than skills. See [Connected agents](/external-agents).
+
+## Questions
+
+<AccordionGroup>
+  <Accordion title="What is the difference between a skill and a tool?">
+    A skill is know-how: the playbook for doing a kind of work. A tool is access: an outside app an agent can act in, like your calendar or your inbox. A skill can tell an agent how to run a report; a tool is what lets it reach the data. Many skills need no tools at all. See [Connect your tools](/connecting-tools).
+  </Accordion>
+  <Accordion title="Can I change a bundled skill?">
+    Reload bundled skills are read only. To make your own version, write a new skill in your Workspace group and edit it freely.
+  </Accordion>
+  <Accordion title="Why is my new skill marked Pending?">
+    A skill you imported, or one saved as a draft, is not live yet. Open it, read the instructions, and choose Activate. Until you do, it never runs, even for agents it is assigned to. This keeps instructions from outside your workspace from running before you have looked at them.
+  </Accordion>
+  <Accordion title="Do skills store passwords or keys?">
+    No. Skills are instructions only. The access an agent needs lives with your connected tools, kept separate from any skill's text.
+  </Accordion>
+  <Accordion title="Does giving an agent lots of skills slow it down?">
+    No. An agent only pulls in a skill's full instructions when the work matches. The rest of the time it just knows the skill is there. Give a teammate as many as fit its job.
+  </Accordion>
+</AccordionGroup>
+
+## Keep going
+
+<CardGroup cols={2}>
+  <Card title="Customize an agent" icon="sliders" href="/customizing-agents">
+    Shape a teammate's role, skills, tools, and guardrails in one place.
+  </Card>
+  <Card title="Connect your tools" icon="plug" href="/connecting-tools">
+    Give your agents access to the apps your team already uses.
+  </Card>
+  <Card title="Work with agents" icon="comments" href="/working-with-agents">
+    Chat with a teammate and watch its work as it happens.
+  </Card>
+  <Card title="Hire your team" icon="user-plus" href="/hiring-your-team">
+    Bring on ready-made agents that come with skills built in.
+  </Card>
+</CardGroup>

@@ -1,0 +1,146 @@
+---
+title: "Knowledge sources"
+description: "Connect the apps your work already lives in so your agents can search, recall, and cite what is inside them."
+---
+
+Your agents are only as sharp as what they know. Knowledge sources give them a second brain: connect the outside apps your work already lives in, like your team chat, your inbox, your docs, or your CRM, and their content becomes searchable and recallable right alongside your team's shared [memory](/memory).
+
+Once a source is connected, Reload reads and indexes what you point it at. From then on, when an agent needs context to answer a question or do a piece of work, it can pull from that source and cite where the answer came from.
+
+<Note>
+  You connect and manage knowledge sources at [app.reload.work](https://app.reload.work). Connecting a source builds on an account you have already linked, so it pairs with [Connect your tools](/connecting-tools).
+</Note>
+
+## What you can connect
+
+You can index content from apps across the kinds of work most teams run on. These are ready to connect today:
+
+<CardGroup cols={2}>
+  <Card title="Slack" icon="slack">
+    Conversation history and threads from the channels you choose.
+  </Card>
+  <Card title="Notion" icon="book">
+    Pages and databases from your Notion workspace.
+  </Card>
+  <Card title="Gmail" icon="envelope">
+    Email threads, so agents recall the context in your inbox.
+  </Card>
+  <Card title="GitHub" icon="github">
+    Issues and repositories your team works in.
+  </Card>
+  <Card title="HubSpot" icon="chart-line">
+    Contacts and deals, so agents know your customers.
+  </Card>
+  <Card title="Jira" icon="list-check">
+    Issues and projects from your Jira boards.
+  </Card>
+  <Card title="Zendesk" icon="headset">
+    Support tickets and their history.
+  </Card>
+</CardGroup>
+
+More sources are being added across docs and files, communications, project management, CRM and sales, and data. If you do not see the one you want yet, it is likely on the way.
+
+## Connect a source
+
+<Steps>
+  <Step title="Open Knowledge sources">
+    Go to Knowledge sources in your workspace and choose to connect a source. Pick the app you want to bring in.
+  </Step>
+  <Step title="Link the account">
+    Sign in to the app and authorize read access. If you already linked it under [Connect your tools](/connecting-tools), Reload uses that connection. Authorizing only lets Reload read the content you choose next.
+  </Step>
+  <Step title="Choose what to index">
+    Point the source at the part you actually want indexed, like a specific Slack channel, a Gmail label, or a Notion database. Bring in what agents should recall, and leave out the rest.
+  </Step>
+  <Step title="Set who can see it">
+    Decide whether everyone in the workspace can use this knowledge, or just you. See [who can see it](#who-can-see-it) below.
+  </Step>
+  <Step title="Start indexing">
+    Reload begins reading and indexing in the background. You can keep working while it runs, and the source shows its progress as it goes.
+  </Step>
+</Steps>
+
+<Tip>
+  Give each source a clear name when you connect it. A workspace with a few sources connected is easier to manage when each one says what it is, like "Support tickets" or "Company wiki".
+</Tip>
+
+## Who can see it
+
+Every source has a visibility setting that controls who can see and recall its content:
+
+- **Everyone in the workspace.** Anyone on your team, and the agents they work with, can draw on this knowledge. This is the default and suits shared references like a company wiki or a support inbox.
+- **Only you.** The source stays private to you. Nobody else in the workspace sees it, and it only surfaces in your own conversations.
+
+You can change a source's visibility any time from its settings. Private sources never appear to other members, so a personal inbox stays personal even in a shared workspace.
+
+## How your agents use it
+
+Connected knowledge feeds straight into recall. When an agent works on something, it searches your indexed sources alongside your team's [memory](/memory) and uses what it finds to stay grounded.
+
+When an agent uses a piece of knowledge, it cites the source, so you can see the name it came from, where inside the source it lives, and how recent it is. A citation links back to the original, so you can always trace an answer to where it came from rather than taking it on faith.
+
+## Keep sources fresh
+
+Reload keeps your sources up to date on its own. It re-checks each connected source on a schedule and pulls in what is new or changed, so your agents recall the current state of things, not a stale snapshot.
+
+Each source shows an honest status at a glance:
+
+- **Up to date.** The last sync finished and the source is current.
+- **Syncing.** Reload is reading and indexing right now.
+- **Paused.** You have stopped syncing this source for now.
+- **Sync failed.** The last attempt could not finish. Reload retries automatically, and the source tells you if you need to step in, such as reconnecting an account whose access expired.
+
+From a source's settings you can also:
+
+- **Sync now.** Ask Reload to refresh a source right away instead of waiting for the next scheduled pass.
+- **Pause and resume.** Stop indexing a source without disconnecting it, then turn it back on later.
+- **Disconnect.** Remove the source when you no longer need it.
+
+## What Reload reads
+
+Indexing only reads. Connecting a source lets Reload read the content you point it at so agents can recall from it, and it never changes, posts, edits, or deletes anything in the connected app. You choose what to bring in when you connect, and you can pause or disconnect a source at any time.
+
+<Warning>
+  Connecting, changing, and disconnecting knowledge sources is an owner or admin action, because it decides which outside content your whole workspace can read. Members can still use the sources that have been shared with them. See [Members and roles](/members-and-roles).
+</Warning>
+
+## Frequently asked
+
+<AccordionGroup>
+  <Accordion title="What is the difference between a knowledge source and a connected tool?">
+    A connected tool lets an agent take an action in an app for you, like sending an email or creating a ticket. A knowledge source reads content out of an app and indexes it so agents can recall from it. The two often use the same linked account, and you can do both. See [Connect your tools](/connecting-tools).
+  </Accordion>
+  <Accordion title="How is this different from memory?">
+    Memory is the shared knowledge your team builds up as it works. A knowledge source brings in content that already exists in an outside app. Both feed the same recall, so agents draw on your memory and your connected sources together. See [Memory](/memory).
+  </Accordion>
+  <Accordion title="Does connecting a source change anything in the app?">
+    No. Indexing is read-only. Reload reads the content you choose so agents can recall it, and never posts, edits, or removes anything in the source.
+  </Accordion>
+  <Accordion title="Can I keep a source private to me?">
+    Yes. Set its visibility to only you. It stays out of everyone else's view and only surfaces in your own conversations.
+  </Accordion>
+  <Accordion title="How do I stop a source from being used?">
+    Pause it to stop syncing while keeping it connected, or disconnect it to remove it entirely. Both are done from the source's settings.
+  </Accordion>
+  <Accordion title="What if a sync fails?">
+    The source shows a clear status and Reload retries on its own. If the cause is something you need to fix, such as an account whose access has expired, reconnect it to resume indexing.
+  </Accordion>
+</AccordionGroup>
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Memory" icon="brain" href="/memory">
+    See how shared knowledge and connected sources come together in recall.
+  </Card>
+  <Card title="Connect your tools" icon="plug" href="/connecting-tools">
+    Link the accounts your sources and your agents build on.
+  </Card>
+  <Card title="Working with agents" icon="messages" href="/working-with-agents">
+    Watch agents put your knowledge to work in a channel.
+  </Card>
+  <Card title="Members and roles" icon="users" href="/members-and-roles">
+    See who can connect and manage sources for the workspace.
+  </Card>
+</CardGroup>

@@ -1,0 +1,147 @@
+---
+title: "Calendar, notes, and wiki"
+description: "Keep shared knowledge in a wiki, jot quick notes, and see every agent schedule in one calendar."
+---
+
+Reload gives you three places to hold what your team knows and to see what your agents are doing. The wiki is your curated, shared knowledge base. Notes are for quick capture. The calendar shows every agent schedule across your workspace at a glance.
+
+Use the wiki for anything you want to keep and reuse. Use notes for fast, personal jotting. Use the calendar to see when your agents run.
+
+## Wiki
+
+The wiki is your workspace knowledge base: a tree of pages and folders that both your team and your agents can use. Write things down once, and your agents can recall them later instead of asking again.
+
+Anyone on your team can read, create, and edit wiki pages. It is collaborative, not locked to admins.
+
+### Create a page
+
+<Steps>
+  <Step title="Open the wiki">
+    Open Wiki in your workspace at [app.reload.work](https://app.reload.work). You will see the page tree on the left and the reader on the right.
+  </Step>
+  <Step title="Start a new page">
+    Select **New page** for a top-level page. To nest a page inside a folder, hover a page in the tree and select the **+** next to it. The new page opens under that parent.
+  </Step>
+  <Step title="Write it">
+    Give the page a title and write the body in markdown. Headings, bold, lists, quotes, inline code, and links all work.
+  </Step>
+  <Step title="Set who can use it">
+    Choose who can see the page and which agents can recall from it, then decide whether to publish. See [Page access](#page-access) below.
+  </Step>
+  <Step title="Create the page">
+    Select **Create page**. It appears in the tree, newest edits first.
+  </Step>
+</Steps>
+
+To edit later, open a page and select **Edit**. To read the plain markdown source, switch the reader from **Read** to **Raw**.
+
+### Link pages together
+
+Type `[[Page title]]` anywhere in a page body to link to another wiki page by its name. The link becomes clickable in the reader and jumps straight to that page. This is the fastest way to build a connected knowledge base without copying content around.
+
+### Page access
+
+Every page carries two independent settings, so you control who among your team sees it and which of your agents can pull from it. Open a page and select **Access**, or set these while creating or editing.
+
+**Who can see this page**
+
+| Setting | Who it means |
+| --- | --- |
+| Workspace | Everyone in your workspace |
+| Team | Members of the team you pick |
+| Private | Only you |
+
+**Which agents can recall from it**
+
+| Setting | Which agents |
+| --- | --- |
+| No agents | People only, no agent can read it |
+| Team agents | Agents on the team you pick |
+| All org agents | Every agent in your workspace |
+| Specific agents | Only the agents you choose |
+
+<Note>
+  A page reaches your agents only when it is **Published** and its agent setting includes them. A page left as a **Draft** stays a working document for people, and no agent can recall from it until you publish. Flip the **Published** switch when the page is ready to be used.
+</Note>
+
+Once a page is published and exposed to agents, they can recall and search it the same way they use [memory](/memory), and answers trace back to the page you can edit.
+
+## Notes
+
+Notes are for quick capture: retros, ideas, a running list, a scratch of thoughts. They are lighter than the wiki, and they are yours by default.
+
+### Write a note
+
+<Steps>
+  <Step title="Open Notes">
+    Open Notes in your workspace at [app.reload.work](https://app.reload.work).
+  </Step>
+  <Step title="Start a note">
+    Select **New note**, give it a title, and start writing.
+  </Step>
+  <Step title="Format as you go">
+    Notes take the same markdown as the wiki, plus checkboxes with `- [ ]` and `- [x]`. Use `[[wikilinks]]` to jump to a wiki page, and `@name` to mention a teammate or agent.
+  </Step>
+</Steps>
+
+Your note saves as you type. A short **Saved** marker confirms it.
+
+Switch between three views with the mode toggle:
+
+- **Read** shows the formatted note.
+- **Edit** gives you the raw editor.
+- **Split** shows both side by side as you write.
+
+Search the note list from the top of the sidebar to find any note by its title or contents.
+
+<Tip>
+  New notes start private to you, and agents do not read your notes unless the note is set to include them. If you `@mention` an agent in a note that exposes no agents, Reload flags it so you know the agent cannot read it. For anything you want your agents to use, put it in the [wiki](#wiki) instead.
+</Tip>
+
+Notes an agent writes for you show up here too, with a byline so you can see who produced them.
+
+## Calendar
+
+The calendar is a read-through view of every routine your agents run across the workspace. It is the place to see what is scheduled, when it last ran, and when it runs next, without opening each agent one by one.
+
+Routines themselves are created and managed on the [Routines](/routines) page and on each agent. The calendar brings them all together in one timeline.
+
+### Views
+
+Switch between four views from the header:
+
+- **Agenda** lists every routine with its agent, cadence, next run, last run, and whether it is active or paused.
+- **Day**, **Week**, and **Month** plot each routine on a timeline so you can see the shape of the week.
+
+An **Up next** strip highlights the routines that run soonest. When more than one agent has routines, each agent gets its own color and you can filter the view down to a single agent.
+
+<Note>
+  Run times are shown in a fixed reference so they never drift when clocks change. A badge in the header confirms the zone, and it tells you if your local time observes daylight saving so you always read the schedule the same way.
+</Note>
+
+### Change a schedule
+
+From the calendar you can also make quick changes:
+
+- Select **New routine** to schedule an agent to run on a cadence.
+- Open any routine to see its full instruction, pause or resume it, edit its schedule, or delete it.
+- Drag a run to a new day or time to reschedule it. Reload asks whether to change the whole recurring schedule or move just that one run, and offers an **Undo** right after.
+
+For the full picture of how routines work, what they can do, and how they report back, see [Routines](/routines).
+
+## Where each one fits
+
+<CardGroup cols={2}>
+  <Card title="Routines" icon="clock" href="/routines">
+    Schedule your agents to run on a cadence and report back.
+  </Card>
+  <Card title="Tasks" icon="list-check" href="/tasks">
+    Track work your team and agents pick up and finish.
+  </Card>
+  <Card title="Memory" icon="brain" href="/memory">
+    The shared recall your agents build as they work.
+  </Card>
+  <Card title="Knowledge sources" icon="book-open" href="/knowledge-sources">
+    Connect documents and sources your agents can draw on.
+  </Card>
+</CardGroup>

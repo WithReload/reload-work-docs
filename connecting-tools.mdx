@@ -1,0 +1,131 @@
+---
+title: "Connecting tools"
+description: "Connect the apps you already use so your agents can act in them, with you in control of what they can touch."
+---
+
+Your agents are far more useful when they can reach the tools you work in every day. Connect an app once and your agents can send an email, update your CRM, create a calendar event, or post an update, all using your own account and only the access you allow.
+
+A connection is a link between your workspace and an outside app like Gmail, Slack, Google Drive, or your CRM. You sign in once, choose what agents may do, and the tools show up for your agents automatically. You stay in charge: every connection is least access by default, sensitive actions can wait for your approval, and you can disconnect at any time.
+
+## Connect a tool
+
+Open **Connectors** from the left, then browse the catalog to find the app you want.
+
+<Steps>
+  <Step title="Find your app">
+    Select **Browse connectors** and search the catalog. Filter by **All**, **Connected**, or **Available** to narrow the list. Each tile shows the app, its category, and whether you are already connected.
+  </Step>
+  <Step title="Select Connect">
+    Select **Connect** on the app's tile. Most apps open a sign-in window where you finish signing in with that app. Some apps instead ask for a key, or a username and password, which is kept secure and never shown back to you.
+  </Step>
+  <Step title="Choose who it is for">
+    If you are asked, pick whether the connection is **just for you** or **shared with your whole workspace**. More on that below.
+  </Step>
+  <Step title="Finish in the sign-in window">
+    Complete sign-in in the window that opened. If your browser blocked it, use **Reopen sign-in**. Once you approve, the connection turns active on its own, usually within a few seconds.
+  </Step>
+  <Step title="Set what agents see">
+    On success you will see the app connected as your account, with a plain line describing what your agents can now do. Select **Set what they see** to choose who can use it, or **Done** to finish. You can change this later.
+  </Step>
+</Steps>
+
+<Note>
+  You do not have to hunt for the catalog. When your team needs a tool that is not connected yet, a **Connect your team's tools** prompt appears on your Overview and in the team's channel, with a one-select chip for each missing app. Connect anytime, and your agents pick it up the moment the tool is ready. The prompt disappears once everything is connected.
+</Note>
+
+## Just you, or your whole workspace
+
+A connection can belong to one person or be shared across your workspace.
+
+- **Just me.** Only your agents use it. Good for a personal inbox or calendar.
+- **Whole workspace.** Everyone's agents can use the one shared connection. Good for a team CRM, a shared drive, or a company Slack.
+
+You can set this when you connect, and you can change who can see and use a connection at any time from its detail pane. See [Set who can use a connection](#set-who-can-use-a-connection).
+
+## When an agent asks to connect a tool
+
+Sometimes an agent realizes mid-work that it needs a tool it does not have yet. Instead of stopping, it proposes the connection. You will see a card, both in the channel and on your Connectors page, that shows which agent is asking, a plain-English reason, and the exact minimal access it wants. It even lists what it deliberately did not ask for.
+
+The rule is simple and firm: an agent can propose a connection, but only a person can approve one. An agent never grants itself access.
+
+- Select **Approve and connect** to run the normal sign-in, exactly as if you had started it. Once the connection is live, the tools join the agent's work in progress and it carries on.
+- Select **Deny** to decline. The agent moves on without it.
+
+If a connect attempt was started and left unfinished, it can wait for you as a **Reconnect** card, already filled in with the app and the access the agent asked for, so you finish it in one select without retyping anything.
+
+## Choose what agents can do
+
+Connecting a tool does not hand agents a blank check. Open a connection from the **Connectors** page to see its tools, each with a permission you control.
+
+- **Always allow.** Agents may use this tool freely.
+- **Needs approval.** Agents must ask you before this tool runs.
+- **Never.** Agents can never use this tool.
+
+Tools are grouped into **Actions**, which change something, and **Read-only tools**, which only look things up. By default, actions ask for your approval and read-only tools are allowed, so nothing is sent or changed on your behalf without a check. Use the control at the top of a group to set every tool in it at once.
+
+<Tip>
+  When an agent hits a tool set to **Needs approval**, it pauses and asks you in the channel rather than guessing. This is the safe middle ground: agents move quickly on reads, and you keep a hand on anything that writes, sends, or spends.
+</Tip>
+
+## Set who can use a connection
+
+Each connection has a **Visibility** setting that decides who can see and use it.
+
+- **Visible.** Anyone in your workspace, and their agents, can use it.
+- **Private.** Only you can use it.
+
+Open the connection on the **Connectors** page and select **Set visibility** to change it. Sharing and per-tool permissions work together: visibility decides who reaches the connection at all, and tool permissions decide what they can do with it.
+
+## Keep your connections healthy
+
+The **Connectors** page lists everything you have connected, with a live status on each one. You can filter to see just the connections that are healthy or the ones that **need attention**.
+
+A connection can drift out of health if the app's sign-in expires or is withdrawn. When that happens it is flagged, and a **Reconnect** button gets you back in with a single sign-in. Your agents pick the tool back up as soon as it is live again.
+
+## See what happened
+
+Every connection action is recorded: who connected or disconnected an app, which approvals were granted or denied, and each time an agent used a connected tool. Open the connector **Activity** feed to review it, filtered by result, by app, or by who acted. You see your own activity, and admins can see the whole workspace's.
+
+## Disconnect a tool
+
+To remove a connection, open it on the **Connectors** page and select **Disconnect**, then confirm.
+
+<Warning>
+  Disconnecting is permanent. It revokes the app and deletes the stored sign-in for good. Any agent using that tool loses access right away and may not finish work that is in progress. To use the app again you connect it from scratch. Because of that, disconnecting always asks you to confirm first.
+</Warning>
+
+## Custom tools and knowledge
+
+The catalog covers the apps most teams need, but you can go further.
+
+<CardGroup cols={2}>
+  <Card title="External tool servers" icon="plug" href="/external-tool-servers">
+    Bring your own tool server by address to give agents tools that are not in the catalog.
+  </Card>
+  <Card title="Knowledge sources" icon="database" href="/knowledge-sources">
+    Connect a source your agents can read from and ground their work in.
+  </Card>
+</CardGroup>
+
+Reach both from the **+** menu on the **Connectors** page, under **Add custom connector** and **Knowledge sources**.
+
+## Who can connect
+
+Any active member of your workspace can connect the apps they need, without waiting on an admin. Admins can shape this: they decide which roles may add which connectors, and set whether new connections default to shared or per-person. See [Members and roles](/members-and-roles).
+
+## Frequently asked
+
+<AccordionGroup>
+  <Accordion title="Does connecting a tool cost credits?">
+    No. Connecting an app is free. Credits are used only when your agents do work, including work that runs a connected tool. See [Credits](/credits).
+  </Accordion>
+  <Accordion title="Do agents get full access to my account?">
+    No. Every connection asks for the smallest access needed to do the job, and an agent-proposed connection shows you the exact access it wants before you approve. You can further limit what agents do with per-tool permissions, and make any connection private to just you.
+  </Accordion>
+  <Accordion title="An agent says it cannot use a tool. Why?">
+    The connection may need attention, the tool may be set to **Never**, or the connection may be private to someone else. Open the app on the **Connectors** page to check its status, its tool permissions, and its visibility. See [Troubleshooting](/troubleshooting).
+  </Accordion>
+  <Accordion title="What is the difference between connecting a tool and reaching my agents somewhere else?">
+    Connecting a tool lets your agents act inside your other apps. Reaching your agents is the reverse: it lets you message your agents from apps like your phone's chat. See [Reaching your agents](/reaching-your-agents).
+  </Accordion>
+</AccordionGroup>

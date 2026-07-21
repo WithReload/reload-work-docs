@@ -1,0 +1,156 @@
+---
+title: "Working with agents"
+description: "Chat one to one with an agent, follow its work as it happens, keep separate conversations, and steer it from its profile."
+---
+
+Every agent on your team has its own chat, just like messaging a colleague. You describe what you need, the agent gets to work in front of you, and you stay in the loop the whole way. This page covers chatting one to one with an agent, keeping separate conversations, and steering an agent from its profile.
+
+Agents also work together with you and your teammates in shared channels. For that side, see [Channels](/channels).
+
+<Note>
+  Connected agents that run outside Reload have no one-to-one chat. They only take part in channels you add them to. See [Connected agents](/external-agents).
+</Note>
+
+## Open a chat
+
+Open any agent's chat from the Agents area, or click **Open chat** on the agent's profile. You land in a three-part view:
+
+<CardGroup cols={3}>
+  <Card title="The switcher" icon="sidebar">
+    A slim rail on the left to jump between your agents and between conversations with the one you have open.
+  </Card>
+  <Card title="The conversation" icon="comments">
+    The center, where you and the agent talk and its work streams in.
+  </Card>
+  <Card title="Outputs" icon="folder-open">
+    A rail on the right with the files, tasks, and reference documents tied to the agent. Hide or show it any time.
+  </Card>
+</CardGroup>
+
+To work with a different agent, open the picker at the top of the left rail and choose one. To bring on someone new, use **Add agent**. See [Hire your team](/hiring-your-team).
+
+## Send a message
+
+Type in the box at the bottom and press **Enter** to send. Use **Shift + Enter** for a new line. Your message appears right away, and the agent starts working on it.
+
+**Attach files** with the paperclip, or drag them straight onto the message box. Reload checks each file's type and size, and you can send a few at once. The agent can read what you send and work from it.
+
+Above the message box sits a row of quick controls for the agent you are chatting with:
+
+- **Connections** shows how many tools the agent can act in, and opens a panel to connect more. See [Connect your tools](/connecting-tools).
+- **Triggers** shows what makes the agent run on its own, from a schedule or an app event, and opens a panel to add more. See [Routines](/routines).
+- **Contact** shows how the agent can reach you when you are away from the app. See [Reach your agents](/reaching-your-agents).
+
+### Slash commands
+
+Type `/` in the message box to open a short menu of shortcuts. Pick one with the arrow keys and **Enter**, or just keep typing. Each command turns into a plain instruction the agent carries out with its own tools, so the result shows up as a card in the chat.
+
+| Command | What it does |
+| --- | --- |
+| `/connect` | Ask the agent to connect an app, then approve it |
+| `/schedule` | Set up work that runs on a schedule |
+| `/task` | Create a task |
+| `/remember` | Save something to shared memory |
+| `/clear` | Start a fresh conversation |
+
+<Tip>
+  You can add details after a command. Try `/schedule a summary every Monday at 9am` or `/task draft the launch email by Friday`.
+</Tip>
+
+## Follow the work as it happens
+
+Replies stream in as the agent writes them, so you see progress rather than waiting for a wall of text. A soft **Working** indicator shows when the agent is mid-task, and when it spins up for a bigger job you will see it get ready first.
+
+As it goes, the agent shows its steps inline:
+
+- **Reasoning** appears as a quiet "Worked for a few seconds" line you can expand to read how it thought through the step, then collapse again.
+- **Actions** show up as cards right in the flow: a task it created, a schedule it set, a memory it saved, an app it connected, a file it produced.
+- **Files** it makes are downloadable from the chat and collected in the Outputs rail.
+
+Scroll up any time to read earlier in the conversation. Older messages load as you go, and the chat stays put where you are reading.
+
+### Approving what an agent does
+
+Depending on an agent's autonomy setting, it may pause to ask before it does something that reaches outside Reload, like connecting an app or using a new tool for the first time. When it does, a card appears in the chat spelling out exactly what it wants to do and what it would get access to. Teammates with the right permissions approve or decline right there, and the agent picks up where it left off. You can set how much an agent does on its own from its profile.
+
+### The Outputs rail
+
+The rail on the right keeps the results of the work close by, in three sections:
+
+- **Outputs** are the files and documents the agent has produced. View or download them without leaving the chat.
+- **Tasks** are the tasks assigned to or created by this agent. See [Tasks](/tasks).
+- **Sources** are the reference documents that guide how the agent works. See [Customize your agents](/customizing-agents).
+
+## Sessions
+
+Each conversation with an agent is its own session, like keeping separate chat threads with the same person. One session might be about this week's launch, another about a report you are drafting. Each keeps its own history, and the agent stays on topic within it.
+
+<Steps>
+  <Step title="Start a new chat">
+    Use the **+** next to Sessions in the left rail, or type `/clear`. A **New chat** row appears at the top, and your first message starts the conversation for real.
+  </Step>
+  <Step title="Switch between conversations">
+    Pick any session in the left rail to reopen it. Reload remembers where you were, so a refresh brings you right back to the same conversation.
+  </Step>
+  <Step title="Rename a conversation">
+    Reload names each session from your first message. To rename it, hover the row and click the pencil, type a new name, and press **Enter**.
+  </Step>
+</Steps>
+
+A reply always lands in the conversation you are viewing, so threads never get crossed.
+
+## The agent profile
+
+Open an agent's profile to see everything about it in one place and to steer how it works. The header shows the agent's name, its **@handle** (how you mention it in channels), and how it joined your team, whether **Hired** from a pack, built as a **Custom** agent, brought in as an **External** agent, or **Shared** with you.
+
+From the header you can:
+
+- **Open chat** to start or continue a one to one conversation.
+- **Assign task** to hand the agent something to do, with it set as the owner. See [Tasks](/tasks).
+- **Pause**, **resume**, or **remove** the agent. Removing an agent hides it from your team and pauses any work it had scheduled. You can bring it back later.
+
+The rest of the profile is organized into tabs:
+
+<AccordionGroup>
+  <Accordion title="Overview" icon="gauge">
+    The agent at a glance: whether it is active, how much it has run lately, how much it does on its own, and a list of its recent runs.
+  </Accordion>
+  <Accordion title="Training docs" icon="file-lines">
+    The agent's persona and the guidance it follows, including its voice and style. This is where you shape how an agent thinks and sounds. See [Customize your agents](/customizing-agents).
+  </Accordion>
+  <Accordion title="Connections" icon="plug">
+    The apps and tools this agent can act in, with a way to connect more. See [Connect your tools](/connecting-tools).
+  </Accordion>
+  <Accordion title="Group chats" icon="hashtag">
+    The channels this agent belongs to. See [Channels](/channels).
+  </Accordion>
+  <Accordion title="Triggers & schedule" icon="clock">
+    What makes the agent run on its own, on a schedule or when an app event happens. See [Routines](/routines).
+  </Accordion>
+  <Accordion title="Incoming webhooks" icon="bolt">
+    Ways an outside system can hand work to this agent.
+  </Accordion>
+  <Accordion title="Skills" icon="wand-magic-sparkles">
+    The reusable abilities this agent has turned on. See [Skills](/skills).
+  </Accordion>
+  <Accordion title="Danger" icon="triangle-exclamation">
+    The stronger controls: how much the agent does on its own, whether it can revise its own persona, and who can see it.
+  </Accordion>
+</AccordionGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Customize your agents" icon="sliders" href="/customizing-agents">
+    Shape an agent's persona, voice, and the guidance it follows.
+  </Card>
+  <Card title="Work in channels" icon="hashtag" href="/channels">
+    Bring people and agents together in one shared conversation.
+  </Card>
+  <Card title="Automate with routines" icon="clock" href="/routines">
+    Set work that runs on a schedule so it happens without you.
+  </Card>
+  <Card title="Reach your agents" icon="mobile" href="/reaching-your-agents">
+    Message your team from outside the app and pick up where you left off.
+  </Card>
+</CardGroup>

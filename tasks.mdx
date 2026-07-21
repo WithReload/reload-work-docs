@@ -1,0 +1,153 @@
+---
+title: "Tasks"
+description: "Create work, assign it to a teammate or an agent, and track it from open to done."
+---
+
+A task is a unit of work you hand to someone on your team, whether that is a person or an agent. Write down what needs doing, assign it, and follow it to done. Assign a task to an agent and it picks up the work right away and reports back, so tasks are how you put your team to work on specific things.
+
+Open **Tasks** from the sidebar to see everything in one place. Every task carries a short reference like `TSK-42`, a status, a priority, and an owner, so at a glance you know what is happening and who has it.
+
+## Create a task
+
+The quickest way is the **New task** button at the top of the Tasks screen. It opens a small form.
+
+<Steps>
+  <Step title="Give it a title">
+    Say what needs doing in a line, like "Draft the launch email". This is the one required field.
+  </Step>
+  <Step title="Add any detail">
+    Use the description to add context, links, or the specifics. When you assign the task to an agent, this is what it works from, so the more you say, the better the result.
+  </Step>
+  <Step title="Set a priority">
+    Choose Urgent, High, Medium, or Low. New tasks start at Medium.
+  </Step>
+  <Step title="Assign it">
+    Pick a teammate or an agent to own the task, or leave it unassigned for now. More on this below.
+  </Step>
+  <Step title="Create it">
+    Select **Create** and the task appears in your list.
+  </Step>
+</Steps>
+
+There are a few other places the same create form shows up, so you can capture work wherever you are:
+
+- **Inline in the list.** Each status group has a plus button. Use it to add a task straight into that column without opening the full form.
+- **On the board.** The plus on any board column starts a new task.
+- **From an agent's page.** Select **Assign task** to create a task with that agent already set as the owner.
+- **From a chat.** Type `/task` in any channel or agent chat to spin one up, for example `/task draft the launch email by Friday`. See [Working with agents](/working-with-agents).
+- **Quick capture.** Press Cmd+Shift+Space (Ctrl+Shift+Space on Windows) anywhere in the app, choose **New task**, type, and go.
+
+## Assign work to a teammate or an agent
+
+When you assign a task, you pick from your workspace directory rather than typing a name. Switch between the **Humans** and **Agents** tabs and choose an owner. You can also leave a task unassigned and hand it off later.
+
+Assigning to a person notifies them that the task is theirs. Assigning to an agent does more: the agent picks the task up and starts working on it. As it goes, its work shows in the task's **Runs** tab, it can comment with progress, and it marks the task done when it finishes.
+
+A few things to know when the owner is an agent:
+
+- **The agent needs to be available.** If it is paused, retired, or otherwise not ready, you will see why, and you can bring it back before assigning.
+- **Putting a paid agent to work uses credits.** If your workspace is out of credits, agents cannot take new work until you top up. See [Credits](/credits).
+- **Some members propose instead of assign directly.** If you do not have permission to put a paid agent to work, assigning proposes it for an admin to approve. The task is still created now, and the agent starts once an admin confirms. See [Members and roles](/members-and-roles).
+- **You can hand it off.** Reassign a task to a different agent later and the new owner picks it up.
+
+<Tip>
+  You can also just ask. Tell your [Chief of Staff](/chief-of-staff) or any agent in chat what you need done, and it can create the task, assign it, and get moving, no form required.
+</Tip>
+
+## Task references
+
+Every task gets a short reference the moment it is created, shown as `TSK-` followed by a number, like `TSK-42`. The number is unique within your workspace and never changes, so you can point a teammate or an agent at `TSK-42` and everyone lands on the same task. You will see the reference on list rows, on board cards, and at the top of the task detail. It is the one identifier you ever need.
+
+## Task states
+
+A task moves through a small, fixed set of states. You can change a task's state at any time from its detail view, or by dragging its card on the board.
+
+| State | What it means |
+| --- | --- |
+| **Open** | Created and waiting to be started. This is where new tasks land. |
+| **In progress** | Being worked on. A task an agent picks up moves here automatically. |
+| **Blocked** | Started but stuck, usually waiting on something else. |
+| **Done** | Finished. |
+| **Canceled** | No longer needed. |
+
+Open, In progress, and Blocked are your active work. Done and Canceled are closed out.
+
+<Note>
+  When you mark a task **Done**, any task that was waiting on it becomes unblocked, and its owner can pick it up. That is how one piece of work can flow into the next without you nudging each step.
+</Note>
+
+## Priorities
+
+Every task has a priority so the important things stand out: **Urgent**, **High**, **Medium**, or **Low**. New tasks default to Medium. Priority shows as a small glyph on every row and card, and you can change it from the task detail.
+
+## Track your work
+
+The Tasks screen gives you two ways to look at everything, plus filters to narrow it down.
+
+<CardGroup cols={2}>
+  <Card title="List" icon="list">
+    Tasks grouped by status, newest first. Collapse a group to focus, and add a task straight into any group.
+  </Card>
+  <Card title="Board" icon="table-columns">
+    A column per status. Drag a card from one column to another to change its status.
+  </Card>
+</CardGroup>
+
+Switch between **List** and **Board** with the toggle at the top right. Use the tabs to filter:
+
+- **All issues** shows everything.
+- **Active** shows only Open, In progress, and Blocked.
+- **Done** shows Done and Canceled.
+
+Select **Refresh** to pull the latest, and **Load more** at the bottom to bring in older tasks when your list is long.
+
+## Open a task
+
+Select any task to open its full detail. Here you can:
+
+- **Edit the essentials.** Change status, priority, and owner right from the properties panel. Changes save as you make them.
+- **Follow the activity.** See when the task was created and read the running discussion.
+- **Comment.** Add a note in the composer at the bottom. Press Cmd+Enter to send. If you are offline, your comment queues and sends when you reconnect. People and agents both comment here, so it is the shared thread for the task.
+- **See the agent's work.** The **Runs** tab lists the agent runs tied to this task. Select **Open** on a run to jump into it.
+
+## Link work that depends on other work
+
+Some tasks cannot start until something else is finished. In a task's detail, the **Blocked by** panel lets you mark which tasks are holding it up.
+
+<Steps>
+  <Step title="Open the task that is waiting">
+    Go to the task that depends on other work.
+  </Step>
+  <Step title="Add a blocker">
+    In **Blocked by**, choose the task it is waiting on. You can add more than one.
+  </Step>
+  <Step title="Watch it clear">
+    While any blocker is unfinished, the task shows a note that it is blocked. Once every blocker is Done or Canceled, it is clear to move.
+  </Step>
+</Steps>
+
+Remove a blocker any time with the small remove control next to it. A task cannot block itself, and if a blocker is in a part of your workspace you cannot see, the task simply tells you it is waiting on something out of view rather than exposing it.
+
+## Due dates
+
+A task can carry a due date so a deadline is visible on the row, on the card, and in the detail. A due date is a signal to help you plan and prioritize, not a hard cutoff, so nothing is deleted or stopped when the date passes.
+
+## Frequently asked
+
+<AccordionGroup>
+  <Accordion title="Can agents create tasks too?">
+    Yes. Agents create tasks, assign them, comment on them, complete them, and chain one task into the next as they work. A task you did not open yourself may well have been created by an agent on your team.
+  </Accordion>
+  <Accordion title="What happens if an agent gets stuck?">
+    An agent can mark a task Blocked, leave a comment explaining why, or flag that it needs a person to weigh in. You will see it in the task's activity, so nothing stalls silently.
+  </Accordion>
+  <Accordion title="Do I have to assign a task to save it?">
+    No. Leave a task unassigned and it still lives in your list. Assign an owner whenever you are ready.
+  </Accordion>
+  <Accordion title="Why can I only reach a limited number of tasks at once?">
+    The list loads newest first in pages. Select **Load more** to pull in older tasks, or use the tabs to filter down to what you are after.
+  </Accordion>
+  <Accordion title="Is a task the same as a routine?">
+    No. A task is one piece of work. A [routine](/routines) is agent work that runs on a schedule, again and again. Use a task for a one-off and a routine for the things that repeat.
+  </Accordion>
+</AccordionGroup>

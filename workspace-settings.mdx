@@ -1,0 +1,162 @@
+---
+title: "Workspace settings"
+description: "Manage your own account and run your whole workspace from one place."
+---
+
+Settings is where you look after two things: your personal account, and the workspace everyone shares. Both live behind the same door, split into clear groups so you always know whether a change affects only you or the whole team.
+
+## Where your settings live
+
+There are two homes for settings.
+
+The **Settings console** is the main one. Open it from the Settings tile at the bottom of the left rail, or click your avatar at the top right and choose Settings. It opens with a menu on the left, split into two groups, and a detail pane on the right:
+
+- **Account** covers you: Profile, Notifications, Appearance, and Security.
+- **Workspace and Admin** covers the whole workspace: Members, Agents, Usage and credits, Billing, and the Audit log.
+
+Each section has its own address, so a link can drop you straight onto Members, Security, or Billing.
+
+The **Workspace and organization** page is the second home. It holds your workspace name and slug, your organization profile, and the owner-only danger zone for transferring ownership or deleting the organization.
+
+<Note>
+  Members and Viewers see the Account group in full, plus their own Security settings. The Workspace and Admin sections are read-only or locked unless you are an Owner or Admin.
+</Note>
+
+Some sections have their own pages in this guide:
+
+<CardGroup cols={2}>
+  <Card title="Members and roles" href="/members-and-roles" icon="users">
+    Invite people, set roles, and manage your team roster.
+  </Card>
+  <Card title="Security" href="/security" icon="lock">
+    Turn on two-factor sign-in and manage your signed-in devices.
+  </Card>
+  <Card title="Credits" href="/credits" icon="gauge">
+    See your balance and where your credits went.
+  </Card>
+  <Card title="Plans and billing" href="/plans" icon="file-lines">
+    Review your plan, seats, and billing.
+  </Card>
+</CardGroup>
+
+## Your account
+
+These settings save to your account and follow you across the workspace.
+
+### Profile
+
+Your profile is how you appear to your team and to your agents. Go to Settings, then Profile.
+
+Update your full name, job title, and a short bio, then Save. Your bio is a good place to say how you like to work, since agents use it for context.
+
+Your email is shown here with a Verified or Unverified badge, but it is not edited on this screen.
+
+### Notifications
+
+Choose what reaches you. Go to Settings, then Notifications. These preferences apply to your in-app inbox and the notification bell.
+
+Turn on **Do not disturb** to pause live pop-ups. Your inbox and bell still record everything, so nothing is lost while you are heads down.
+
+Below that, toggle individual notification types on or off, such as when an agent needs your approval, when a run you own finishes or fails, or when you are mentioned in a channel. A few types are always on and cannot be turned off, so you never miss the ones that matter.
+
+### Appearance and accessibility
+
+Go to Settings, then Appearance.
+
+Pick the **Dark** or **Light** theme. The change applies instantly.
+
+You can also fine-tune how the app feels with a set of accessibility toggles:
+
+- **Reduce motion** minimizes animations and transitions.
+- **Reduce transparency** makes overlays and translucent surfaces more solid.
+- **Increase contrast** uses stronger borders and clearer supporting text.
+- **Larger text** scales the interface up.
+
+<Note>
+  Appearance and accessibility preferences apply to the device you set them on. They do not sync to your other devices.
+</Note>
+
+## Workspace and admin
+
+The Workspace and Admin group is where Owners and Admins run the shared workspace.
+
+- **Members** lists everyone in the workspace, people and agents alike. See [Members and roles](/members-and-roles).
+- **Agents** shows every agent in the workspace in one place. If you have the right access, you can pause an agent to stop it taking new work, or resume it later. Learn more in [Working with agents](/working-with-agents).
+- **Usage and credits** shows your credit balance and where it went. See [Credits](/credits).
+- **Billing** covers your plan and payment. See [Plans and billing](/plans).
+- **Audit log** is a permanent record of privileged actions, covered below.
+
+### Audit log
+
+The audit log is a permanent, tamper-proof record of every privileged action in the workspace, so you can always see who did what. Go to Settings, then Audit log.
+
+Search for a person, an action, or a target, and filter by category to narrow the list. To keep a copy, click **Export CSV** to download the events you are currently viewing.
+
+<Note>
+  If you do not have full admin access, the audit log shows only your own actions.
+</Note>
+
+## Your workspace and organization
+
+Open **Workspace and organization** to manage the identity of the workspace itself. It has a small menu with a Workspace group and, for Owners and Admins, an Organization group.
+
+### Workspace name and slug
+
+The **General** section shows your workspace name and its slug. Members see this read-only. If you are an Owner or Admin, use **Edit profile** to jump straight to the organization profile editor, where the name and slug are actually changed.
+
+### Organization profile
+
+Open **Org profile** to edit how your organization appears.
+
+<Steps>
+  <Step title="Open the editor">
+    In Workspace and organization, choose Org profile.
+  </Step>
+  <Step title="Update the details">
+    Change the organization name, slug, primary domain, default member role, and logo. For the logo, paste an image URL. The default member role is the role a new person gets when they join without an explicit role, either Member or Viewer.
+  </Step>
+  <Step title="Save your changes">
+    A save bar appears whenever you have unsaved edits. Click Save changes to keep them, or Discard to undo.
+  </Step>
+</Steps>
+
+<Warning>
+  Your slug is used in your organization's public links. If you change it, existing links to the old slug stop working. Change it deliberately.
+</Warning>
+
+### Danger zone
+
+The danger zone holds two actions that only the Owner can take. A non-owner sees a notice explaining that these are owner-only.
+
+<Steps>
+  <Step title="Transfer ownership">
+    In the Danger zone, click Transfer, pick another active member as the new owner, type TRANSFER to confirm, and submit. The new owner gains full control, including billing and the ability to delete the organization. You keep your other access.
+  </Step>
+  <Step title="Delete the organization">
+    Click Delete, read the warning, and type your organization slug exactly to confirm. This permanently removes the organization, its workspaces, members, agents, and all data. It cannot be undone.
+  </Step>
+</Steps>
+
+## Signing out
+
+To sign out, click your avatar at the top right and choose Log out.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why can't I see the Members or Billing sections?">
+    Those sections are for Owners and Admins. As a Member or Viewer you can still reach your own Account settings, including Profile, Notifications, Appearance, and Security.
+  </Accordion>
+  <Accordion title="My theme didn't carry over to my other device.">
+    That is expected. Appearance and accessibility preferences apply to the device you set them on and are not synced across devices. Set them again on each device.
+  </Accordion>
+  <Accordion title="Do not disturb is on, but I still see notifications in my inbox.">
+    Do not disturb pauses live pop-ups only. Your inbox and notification bell keep recording everything so nothing is lost. Some notification types are also always on and cannot be turned off.
+  </Accordion>
+  <Accordion title="Who can transfer ownership or delete the organization?">
+    Only the Owner. Both actions live in the danger zone of the Workspace and organization page and require you to type a confirmation exactly before they run.
+  </Accordion>
+  <Accordion title="I changed my slug and some links broke.">
+    Changing the slug updates your organization's public links, so links to the old slug stop working. Update any saved links to use the new slug.
+  </Accordion>
+</AccordionGroup>

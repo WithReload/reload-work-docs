@@ -1,55 +1,33 @@
-# Mintlify Starter Kit
+# Reload documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+This repository holds the source for the Reload user guide, published at [reload.work](https://reload.work).
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+Reload is an agentic team operating system. You create a workspace, meet a Chief of Staff, and hire a team of AI agents that work alongside you in chat channels. Together you run tasks and scheduled routines, share a memory and a wiki, connect the tools you already use, and reach your agents wherever you work. Work is metered in credits.
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+## What is here
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+- `*.mdx` — the guide pages, written in Markdown with frontmatter.
+- `docs.json` — site configuration: navigation, theme, colors, and links.
+- `logo/`, `favicon.svg` — brand assets for the site.
+- `AGENTS.md` — writing and content rules for anyone, human or AI, editing these docs.
 
-## AI-assisted writing
+## Preview locally
 
-Set up your AI coding tool to work with Mintlify:
+Install the preview CLI, then run it from the repo root where `docs.json` lives:
 
 ```bash
-npx skills add https://mintlify.com/docs
-```
-
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
-
-See the [AI tools guides](/ai-tools) for tool-specific setup.
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
 npm i -g mint
-```
-
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+The preview opens at `http://localhost:3000`.
 
-## Publishing changes
+## Making changes
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+- Edit or add `.mdx` pages, then register new pages in the `navigation` section of `docs.json`.
+- Read `AGENTS.md` first. It covers the terminology, voice, and content boundaries these docs must follow.
+- Open a pull request for review. Changes merged to `main` are published automatically.
 
-## Need help?
+## Support
 
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+Questions about the product go to [support@reload.work](mailto:support@reload.work).

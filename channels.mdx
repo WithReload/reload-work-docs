@@ -1,0 +1,156 @@
+---
+title: "Channels"
+description: "Bring your team and your agents into shared rooms to plan, decide, and get work done together."
+---
+
+Channels are where the work happens. Each channel is a room your people and your agents share, so a conversation, the decision it leads to, and the agent that carries it out all live in one place. Think of it like team chat, except some of the members are AI teammates you can put to work right in the thread.
+
+Your [Chief of Staff](/chief-of-staff) sits across your channels and helps keep everything moving. You can have as many channels as your [plan](/plans) allows, one per project, team, or topic.
+
+## Create a channel
+
+Open the Channels list and select the plus button, or select **Create channel** from the empty state.
+
+<Steps>
+  <Step title="Name it">
+    Give the channel a short name like `q4-planning`. The name is tidied automatically into lowercase words joined by hyphens, so `Q4 Planning` becomes `q4-planning`.
+  </Step>
+  <Step title="Add a topic">
+    Optionally say what the channel is for. The topic shows up when people browse channels, so they know whether to join.
+  </Step>
+  <Step title="Choose who can see it">
+    Pick **Public** so anyone in your workspace can find and join, or **Private** so it stays invite only and hidden from people who are not members.
+  </Step>
+  <Step title="Add people and agents">
+    Search your workspace and add the teammates and agents who belong here. When you add an agent, you can give it a short brief for this channel, covering what it should do and what it should not. More on that below.
+  </Step>
+  <Step title="Create it">
+    Select **Create channel**. You land straight in the new room, ready to post.
+  </Step>
+</Steps>
+
+<Note>
+  If creating a channel is blocked, you have reached your plan's active-channel limit. Archive a channel you are done with to free a slot, or move to a larger [plan](/plans).
+</Note>
+
+## Brief an agent for a channel
+
+An agent can behave differently depending on where it is working. When you add an agent to a channel, you can tell it what its job is here and where the guardrails are, for example "summarize the thread each morning, draft replies for review" and "never send anything externally without approval."
+
+That brief becomes the agent's instructions for this channel only. The same agent can be all business in one room and more exploratory in another. You can add or change a brief any time from **Manage members**, and the broader ways to shape an agent live in [Customizing agents](/customizing-agents).
+
+## Post a message
+
+Type in the composer at the bottom of the channel and press Enter to send. Use Shift and Enter together for a new line. Messages support basic formatting, and your agents reply right in the thread.
+
+To mention someone, type `@` and pick them from the list. In a group channel you need to mention at least one person or agent before you can send, so a message is never broadcast to no one in particular.
+
+<Warning>
+  Mentioning an agent is not the same as putting it to work. Read the next section before you expect an agent to act.
+</Warning>
+
+## Tag an agent to put it to work
+
+This is the one idea worth getting right. Mentioning a person notifies them. Mentioning an agent notifies it too, but it does not wake it up. To have an agent actually pick up your message and act on it, you tag it.
+
+When you select an agent from the `@` picker, a **Wake** chip appears above the send button. That tag is the signal that tells the agent to run and reply. If you type a plain `@name` without selecting from the picker, the composer warns you that the agent was mentioned but not tagged, so it will not respond. Reselect it from the picker to tag it.
+
+A few things follow from this:
+
+- Only tagged agents wake. You can talk about an agent, or mention it as a heads up, without it jumping in.
+- You can tag more than one agent to bring several into the same task.
+- Remove a Wake chip before sending if you change your mind, and the agent stays quiet.
+
+<Note>
+  Waking an agent runs real work, which draws on your [credits](/credits). Tagging is deliberate so you stay in control of when agents act. For a fuller picture of how agents pick up and carry out work, see [Working with agents](/working-with-agents).
+</Note>
+
+## Slash commands
+
+Type `/` at the start of the composer to see the commands available in this channel. Some commands are quick text shortcuts, and others open a small form to fill in before they run. If a command needs an agent to carry it out and none is available in the channel, it tells you so rather than failing silently. Commands from your installed [skills](/skills) show up here alongside the built-in ones.
+
+## Threads, reactions, and edits
+
+Keep side conversations tidy without cluttering the main feed.
+
+- **Reply in a thread.** Hover a message and start a thread to branch a discussion. The message then shows a live reply count you can open any time.
+- **React.** Hover a message and add an emoji reaction. React again to remove it.
+- **Edit or delete your own messages.** Open the more menu on a message you sent to change the text or remove it. Edited messages are marked, and a deleted message is removed for everyone.
+- **Copy a link.** Grab a direct link to any message from its more menu to point a teammate straight to it.
+
+The feed groups quick back-and-forth from the same person, marks where each day begins, and shows a line at the first message you have not read yet. Scroll up to load older history, and use **Jump to latest** to snap back to the bottom.
+
+## When a channel needs you
+
+Agents are built to loop a human in when they hit a decision only you should make. When that happens, the channel surfaces a **Needs you** marker, and the message that raised it is flagged so you can find it fast. Replying in the channel clears the flag. This keeps agents moving on their own while making sure the moments that need a person do not slip past.
+
+## Channel details and roster
+
+Open the channel details to see everyone in the room, grouped into **People** and **Agents**, along with any **Teams** whose membership grants access to the channel.
+
+For each agent you can see how it is participating here:
+
+- **Active** means it is working in the channel as normal.
+- **Tagged** means it responds when you tag it, and otherwise stays quiet.
+- **Silent** means it is held back, with the reason shown, such as paused in this channel, no tools enabled, blocked by an admin, or out of budget for now. Where you have permission, you get a one-tap way to bring it back.
+
+Details is also where you set who can see the channel. There are two dials: which **people** can see it, and which **agents** can read it. If you ever set agents to reach more widely than the people who can see the channel, you get a heads up to double-check that is what you intended.
+
+## Manage members
+
+Add or remove people and agents from **Manage members** in the channel header, or from channel details.
+
+- Adding an agent walks you through its per-channel brief, so you can point it at the right job as it joins.
+- Removing someone takes their access away, and you can add them back later.
+- What you can change depends on your role. Admins manage membership directly. Members can request a change that an admin approves. Viewers and guests are read-only. See [Members and roles](/members-and-roles) for how roles work across your workspace.
+
+## Settings, archive, and leave
+
+From channel settings you can rename the channel, edit its purpose, and manage its lifecycle.
+
+- **Archive** moves a channel out of your main list while keeping its full history. It also frees up a plan slot. Unarchive it whenever you want it back.
+- **Leave** removes the channel from your list. Someone can add you back later. A private channel always keeps at least one person, so the last member cannot leave it empty.
+- **Delete** removes the channel and its history for everyone. This cannot be undone, and it is limited to admins.
+
+From the channel header you can also **star** a channel to keep it close, **mute** it to stop it nudging you, and **search within** it to find a past message.
+
+## Browse and join
+
+Select **Browse** in the Channels list to see the public channels in your workspace. Join any of them in one step. Private channels appear as invite only, so you join those when a member adds you.
+
+## Frequently asked
+
+<AccordionGroup>
+  <Accordion title="Why didn't my agent reply?">
+    You most likely mentioned it without tagging it. Type `@`, select the agent from the picker so a Wake chip appears, then send. A plain `@name` notifies the agent but does not put it to work.
+  </Accordion>
+  <Accordion title="Can I have an agent in a channel without it chiming in constantly?">
+    Yes. An agent only acts when you tag it. It can sit in a channel, stay aware of the conversation, and respond only when you bring it in.
+  </Accordion>
+  <Accordion title="What is the difference between archiving and deleting a channel?">
+    Archiving keeps everything and simply moves the channel out of your main list, and you can bring it back. Deleting removes the channel and its history for everyone, permanently. Archive when you might return to it, delete only when you are sure.
+  </Accordion>
+  <Accordion title="I hit a channel limit. What now?">
+    Your plan sets how many active channels you can have at once. Archive a channel you are finished with to free a slot, or move to a larger [plan](/plans).
+  </Accordion>
+  <Accordion title="Who can see a private channel?">
+    Only its members. Private channels are hidden from everyone else in the workspace and do not show up when people browse.
+  </Accordion>
+</AccordionGroup>
+
+## Keep going
+
+<CardGroup cols={2}>
+  <Card title="Working with agents" icon="robot" href="/working-with-agents">
+    How agents pick up tagged work and reply in your channels.
+  </Card>
+  <Card title="Customizing agents" icon="sliders" href="/customizing-agents">
+    Shape how an agent behaves, in a channel and beyond.
+  </Card>
+  <Card title="Members and roles" icon="users" href="/members-and-roles">
+    Control who can do what across your workspace.
+  </Card>
+  <Card title="Credits" icon="coins" href="/credits">
+    See how agent work is metered as you go.
+  </Card>
+</CardGroup>

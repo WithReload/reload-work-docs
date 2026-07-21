@@ -1,34 +1,102 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Reload",
   "colors": {
     "primary": "#16A34A",
-    "light": "#07C983",
+    "light": "#22C55E",
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "pages": [
       {
-        "group": "Getting Started",
+        "group": "Getting started",
         "pages": [
-          "index",
-          "quickstart"
+          "introduction",
+          "quickstart",
+          "concepts"
+        ]
+      },
+      {
+        "group": "Your AI team",
+        "pages": [
+          "chief-of-staff",
+          "hiring-your-team",
+          "working-with-agents",
+          "customizing-agents"
+        ]
+      },
+      {
+        "group": "Working together",
+        "pages": [
+          "channels",
+          "tasks",
+          "routines",
+          "calendar-notes-wiki"
+        ]
+      },
+      {
+        "group": "Knowledge",
+        "pages": [
+          "memory",
+          "knowledge-sources"
+        ]
+      },
+      {
+        "group": "Connections",
+        "pages": [
+          "connecting-tools",
+          "reaching-your-agents",
+          "external-tool-servers"
+        ]
+      },
+      {
+        "group": "Skills and media",
+        "pages": [
+          "skills",
+          "media"
+        ]
+      },
+      {
+        "group": "Credits and plans",
+        "pages": [
+          "credits",
+          "plans"
+        ]
+      },
+      {
+        "group": "Developers",
+        "pages": [
+          "external-agents"
+        ]
+      },
+      {
+        "group": "Administration",
+        "pages": [
+          "members-and-roles",
+          "security",
+          "workspace-settings"
+        ]
+      },
+      {
+        "group": "Help",
+        "pages": [
+          "troubleshooting"
         ]
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Website",
+          "href": "https://reload.work",
+          "icon": "globe"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "App",
+          "href": "https://app.reload.work",
+          "icon": "grid-2"
         }
       ]
     }
@@ -41,32 +109,19 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@reload.work"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Open Reload",
+      "href": "https://app.reload.work"
     }
   },
   "contextual": {
     "options": [
       "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+      "view"
     ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
   }
 }

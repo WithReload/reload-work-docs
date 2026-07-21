@@ -1,0 +1,146 @@
+---
+title: "Customizing an agent"
+description: "Use the agent builder to shape a teammate's role, instructions, skills, and tools."
+---
+
+Every agent on your team can be shaped to fit the job you have in mind. The agent builder is where you do it. You give a teammate a name and a face, tell it what it does and how to behave, hand it the skills and tools it needs, and set how much rope it has before it checks in with you.
+
+You can build an agent from scratch, and you can open one you already have to adjust how it works. If you would rather spin up a teammate quickly by describing the job in your own words, start with [Hiring your team](/hiring-your-team). The builder is the hands-on version, with every setting in one place.
+
+## Open the builder
+
+Open the command bar and choose **Build an agent** to start a fresh, custom teammate. You land on a two-panel screen: a list of sections on the left, and the settings for the section you are on to the right.
+
+At the top right is a **Basic** and **Advanced** switch:
+
+- **Basic** shows the essentials most teammates need: identity, role, skills, guardrails, and schedules.
+- **Advanced** reveals everything else, including tools and connections, runtime, and memory sharing.
+
+Start in Basic. Flip to Advanced only when you need the extra control. You can move between the two at any time without losing your work.
+
+## Give it an identity
+
+Open the **Identity** section first.
+
+<Steps>
+  <Step title="Name it">
+    Give your teammate a name, like Beacon. This is how it shows up in your channels and lists.
+  </Step>
+  <Step title="Pick a handle">
+    Choose the @handle your team will use to mention it, like `@beacon`. Reload checks the handle is free as you type and flags it if it is already taken. Pick another and you are good to go.
+  </Step>
+  <Step title="Set an avatar colour">
+    Slide to pick the colour for its avatar so it is easy to spot at a glance.
+  </Step>
+</Steps>
+
+<Note>
+  Your team reaches an agent by mentioning its @handle in a channel it belongs to, the same way you would tag a person. See [Working with agents](/working-with-agents).
+</Note>
+
+## Tell it what to do and how to behave
+
+Two fields in the Identity section shape how the agent shows up and acts. This is where you give it its instructions.
+
+- **One-line summary.** What it does, in a sentence. For example, "Watches the support inbox and drafts replies."
+- **Personality.** Its tone and how it should behave. For example, "Friendly, concise. Confirms understanding before acting."
+
+Keep both plain and specific. The clearer you are about the job and the manner, the more predictable the teammate.
+
+<Tip>
+  For deeper, longer-lived guidance, add **training documents** to an agent after you create it. These are persona or scenario notes that guide how it responds. See [Adjust an agent you already have](#adjust-an-agent-you-already-have).
+</Tip>
+
+## Set its role and team
+
+Open the **Role and team** section.
+
+- **Role title.** A short job title, like "Support teammate." It sets expectations for what this agent is here to do.
+- **Team.** Assign the agent to a team so it sits with the people and agents it works alongside. If you have no teams yet, create one first in [Members and roles](/members-and-roles).
+- **Who can see it.** Choose **Everyone**, so anyone in the workspace can see and use it, or **Just me**, so only you can see and talk to it. You can change this later.
+
+## Choose its skills
+
+Open the **Skills** section. Skills are the playbooks an agent knows how to run: a step-by-step way of doing a specific kind of work. Toggle on the skills you want this teammate to have.
+
+If the list is empty, or the skill you want is not there, add skills from your Skills library first. Read [Skills](/skills) for how they work and how to bring in more.
+
+## Connect its tools
+
+Open the **Tools and connections** section (this one lives under Advanced). Tools are the outside apps and tool servers an agent can act on, like your calendar, your inbox, or a service your team already uses. Toggle on the ones this teammate should be able to use.
+
+Each connection is scoped to the least it needs to do its job, so an agent only ever gets the access you grant it. If the list is empty, connect a tool first:
+
+<CardGroup cols={2}>
+  <Card title="Connect a tool" icon="plug" href="/connecting-tools">
+    Link the apps your team already uses, then assign them to an agent.
+  </Card>
+  <Card title="Add a tool server" icon="server" href="/external-tool-servers">
+    Bring in a tool server for capabilities beyond the built-in apps.
+  </Card>
+</CardGroup>
+
+## Set guardrails
+
+Open the **Guardrails** section to decide how much an agent can do on its own before it checks in with you.
+
+- **Act on its own.** Runs tasks end to end without checking in.
+- **Ask before acting.** Proposes what it wants to do, then waits for your go-ahead on anything risky.
+- **Plan only.** Drafts a plan for you to run. It never acts itself.
+
+There is also a **Widen what it can do** switch. It lets an agent act beyond the defaults for its role. It is off by default, and turning it on always needs an admin's approval before the agent goes live.
+
+<Note>
+  Start new teammates on **Ask before acting** while you learn how they work, then loosen the reins once you trust them. More on how agents act in [Working with agents](/working-with-agents).
+</Note>
+
+## More advanced options
+
+Under Advanced you will also find:
+
+- **Runtime.** Where the agent's tools run. **Standard** uses the built-in tools with no extra setup. The **cloud** option gives it an isolated runtime for heavier work, and needs an admin's approval.
+- **Memory and exposure.** Who the agent shares what it learns with: just you, your team, or the whole workspace. See [Memory](/memory).
+- **Schedules.** Run the agent automatically on a cadence, like every weekday or every day at 9am. For the full picture of scheduled work, see [Routines](/routines).
+
+## Create it or propose it
+
+When your teammate is ready, the button at the bottom does one of two things, depending on your role and the settings you chose:
+
+- **Create agent.** Adds it to your team right away. You can undo straight after.
+- **Propose agent.** Sends it to an admin to approve. This happens when you do not have permission to add agents directly, or when a setting needs sign-off, such as widening what it can do or choosing the cloud runtime. A proposed agent shows up greyed in your roster until an admin approves it.
+
+<Warning>
+  A teammate needs at least a name and an available handle before you can create or propose it. If you are offline, you will need to reconnect first.
+</Warning>
+
+## Adjust an agent you already have
+
+Open any agent to review and change how it is set up. Most day-to-day adjustments live on the agent's own profile, organised into tabs:
+
+- **Skills.** See the skills it has enabled, turn one off in place, or add a new one from your Skills library.
+- **Connections.** Manage the tools it can act on.
+- **Training documents.** Add persona or scenario notes that guide how it responds, and edit them any time. If self-authoring is on, you can also ask the agent to write or revise one for you in chat.
+- **Approvals and control.** Turn self-authoring on or off. When it is on, the agent can refine its own instructions and training notes. A person can always edit them too.
+- **Who can see it.** Switch between everyone and just you.
+- **Triggers and schedule.** Set when the agent runs on its own.
+
+Use the header to pause, resume, or archive an agent. What you can change follows your workspace role.
+
+## Hired agents
+
+Some teammates come from a ready-made pack, and their provider manages their core identity: name, handle, and role title stay locked. To change those, choose **Fork as custom** to make your own copy, then edit it freely.
+
+<AccordionGroup>
+  <Accordion title="What is the difference between skills and tools?">
+    A skill is a playbook: a way of doing a kind of work, step by step. A tool is a connection to an outside app or tool server the agent can act on. You give an agent both, and it uses its skills to decide how to work and its tools to actually get things done.
+  </Accordion>
+  <Accordion title="Can I change an agent's name or handle after I create it?">
+    Yes, for a custom agent. Open the builder for it and update the identity fields. A hired agent locks those fields until you fork it to a custom copy.
+  </Accordion>
+  <Accordion title="How do I give an agent long, detailed instructions?">
+    Keep the short version in the Personality field, and add training documents on the agent's profile for anything longer. Those notes guide how it responds and can be edited whenever you like.
+  </Accordion>
+  <Accordion title="Why did my new agent go to an admin instead of joining the team?">
+    Either your role lets you propose agents rather than add them directly, or you turned on a setting that needs sign-off, like widening what it can do or the cloud runtime. It joins the team once an admin approves it. See [Members and roles](/members-and-roles).
+  </Accordion>
+</AccordionGroup>

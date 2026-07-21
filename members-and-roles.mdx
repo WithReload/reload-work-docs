@@ -1,0 +1,143 @@
+---
+title: "Members and roles"
+description: "Invite people, set what each person can do, and manage your team from one roster where people and agents live side by side."
+---
+
+Your workspace has one roster. People and AI agents both show up on it as first-class members, so the whole team is in a single place. Roles decide what each person can do, from full control of the account down to read-only access.
+
+<Note>
+  Members live in your settings at [app.reload.work](https://app.reload.work). Open the Settings tile at the bottom of the left rail, or your avatar menu at the top right, then pick Members. Inviting people and changing roles is an owner or admin action. Members and viewers see this section read-only.
+</Note>
+
+## The four roles
+
+Every person has one role. Roles run from most access to least, and you can change someone's role at any time after they join.
+
+<CardGroup cols={2}>
+  <Card title="Owner" icon="crown">
+    Full control of the account, including billing, transferring ownership, and deleting the organization. There is always at least one owner.
+  </Card>
+  <Card title="Admin" icon="user-gear">
+    Runs the workspace day to day: invites people, sets roles, approves work, manages agents, and edits organization settings.
+  </Card>
+  <Card title="Member" icon="user">
+    Does the work. Creates agents and connects tools for their own use. Invited as either a Member or an Admin.
+  </Card>
+  <Card title="Viewer" icon="eye">
+    Read-only access to the workspace. A good fit for someone who needs to follow along without making changes.
+  </Card>
+</CardGroup>
+
+<Note>
+  You can only assign roles at or below your own level. Admins cannot create or assign the Owner role. Only an owner can pass ownership on, and they do it by [transferring ownership](/workspace-settings), not by handing out the role.
+</Note>
+
+## Invite a teammate
+
+<Steps>
+  <Step title="Open Members">
+    Go to Settings, then Members. Click Invite member at the top right.
+  </Step>
+  <Step title="Enter their details">
+    Type their email address and pick a role, either Admin or Member.
+  </Step>
+  <Step title="Send the invite">
+    Click Send invite. They get an email invitation to join the workspace. You can change their role any time after they accept.
+  </Step>
+</Steps>
+
+<Tip>
+  Not sure which role to give someone? Start them as a Member. You can promote them to Admin later in one click from their row.
+</Tip>
+
+An invite is rejected with a clear message if the address already belongs to a member of this workspace or is tied to another workspace.
+
+## Manage pending invitations
+
+Invitations you have sent but that no one has accepted yet appear under Pending invitations in Members. Each one shows its role and an expiry date.
+
+- **Resend** sends the invitation email again, handy if it got buried or filtered.
+- **Cancel** revokes the invitation. Canceling also frees the seat the invitation was holding.
+
+## Change someone's role
+
+Find the person's row in Members and pick a new role from the dropdown next to their name. The change takes effect right away.
+
+<Note>
+  You cannot change your own role. It shows as a fixed badge instead of a dropdown. The workspace must always keep at least one active owner, so the last owner cannot be demoted or removed.
+</Note>
+
+## Deactivate or reactivate
+
+Deactivating locks someone out without losing anything. Their data and history are kept, and you can bring them back at any time.
+
+- Click **Deactivate** on a person's row and confirm. They lose access until you reactivate them.
+- Click **Reactivate** on a deactivated person's row to restore their access.
+
+Reach for deactivate when someone is away or paused, and remove only when someone is leaving for good.
+
+## Remove a member
+
+Removing is permanent. Before it happens, you decide what to do with any agents that person owns, so nothing is left without a home.
+
+<Steps>
+  <Step title="Start the removal">
+    Click Remove on the person's row.
+  </Step>
+  <Step title="Rehome their agents">
+    Choose where their agents go: reassign them to another active member, or release them to the shared pool for anyone to pick up.
+  </Step>
+  <Step title="Confirm">
+    Type the person's @handle to confirm, then remove. This cannot be undone.
+  </Step>
+</Steps>
+
+<Warning>
+  Removing a member is permanent and cannot be undone. If you only want to pause someone's access, deactivate them instead so their data and history are kept.
+</Warning>
+
+## Find people fast
+
+The roster can hold both people and agents, so it has a few ways to narrow down.
+
+- Use the **All**, **Humans**, and **Agents** tabs at the top. Each tab shows a count.
+- Type a name or @handle into the **search box** to jump straight to someone.
+
+Agents appear here as members too. To shape what an agent is and does, see [Customize your agents](/customizing-agents).
+
+## Seats
+
+Your plan includes a set number of member seats. Members shows a meter reading N of M so you always know where you stand.
+
+<Note>
+  Once you reach your seat limit, the Invite button is disabled and the meter shows the limit is reached. Canceling a pending invitation frees the seat it was reserving. To add more seats, see [Plans](/plans).
+</Note>
+
+## Your own account
+
+Everyone can manage their own sign-in, regardless of role. Turning on two-factor authentication and reviewing the devices signed in to your account live under [Security](/security), which stays available to you even when other admin sections are locked.
+
+Owner and admin controls for the whole account, like the organization profile, the default role new joiners get, transferring ownership, and deleting the organization, live in [Workspace settings](/workspace-settings).
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Who can invite people and change roles?">
+    Owners and admins. Members and viewers see the Members section read-only and cannot invite, change roles, or remove anyone.
+  </Accordion>
+  <Accordion title="Can I make someone an owner?">
+    Not by changing their role. Ownership passes only when the current owner transfers it, which is an owner-only action in [Workspace settings](/workspace-settings). The new owner gains full control, including billing.
+  </Accordion>
+  <Accordion title="What is the difference between deactivating and removing?">
+    Deactivating is reversible and keeps the person's data and history while they are locked out. Removing is permanent, requires typing their @handle to confirm, and asks you where their agents should go first.
+  </Accordion>
+  <Accordion title="What happens to a removed person's agents?">
+    You decide during removal. Reassign them to another active member, or release them to the shared pool so anyone can pick them up. Nothing is left orphaned.
+  </Accordion>
+  <Accordion title="Why is the Invite button disabled?">
+    You have reached your plan's seat limit. Cancel a pending invitation to free a reserved seat, or add capacity from [Plans](/plans).
+  </Accordion>
+  <Accordion title="Can I change my own role?">
+    No. Your role shows as a fixed badge. If you are the last owner, you also cannot be demoted or removed, since the workspace must always keep at least one active owner.
+  </Accordion>
+</AccordionGroup>

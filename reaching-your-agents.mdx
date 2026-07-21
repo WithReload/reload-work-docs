@@ -1,0 +1,122 @@
+---
+title: "Reaching your agents"
+description: "Let people message your agents from Telegram, Slack, WhatsApp, SMS, and email, and get replies back in the same app."
+---
+
+Your agents live in Reload, but the people who work with them do not have to. Connect a channel and anyone can message an agent from an app they already use. It is two-way: their message reaches the agent, and the agent's reply goes back out the same way.
+
+You set this up on the **Contact methods** screen at [app.reload.work](https://app.reload.work). Each channel routes incoming messages to one agent, and you decide who is allowed to reach it.
+
+<Note>
+Connecting and managing channels is available to workspace owners and admins. Other members can still add their own contact methods for notifications. See [Members and roles](/members-and-roles).
+</Note>
+
+## Connect a channel
+
+Open **Contact methods** and select **Connect a channel**, then pick the channel you want. A short setup wizard walks you through four steps.
+
+<Steps>
+  <Step title="Connect">
+    Paste the details for the channel (for example, a bot's access key, or your messaging number). Add an optional label so you can tell your channels apart. The details are checked live and stored securely. They are shown once and never displayed again.
+  </Step>
+  <Step title="Route">
+    Choose which agent incoming conversations go to. This is the channel's default agent. You do not need any conversation IDs. The first message from a new sender binds the conversation to that agent automatically.
+  </Step>
+  <Step title="Access">
+    Decide how new, unknown senders are handled. The default, **Open**, means a connected channel just works. See [Decide who can reach it](#decide-who-can-reach-it).
+  </Step>
+  <Step title="Go live">
+    Reload confirms the channel is connected and tells you what to do next, such as which bot to message. Your first message lands here for you to see, and the agent starts replying.
+  </Step>
+</Steps>
+
+## What each channel needs
+
+<AccordionGroup>
+  <Accordion title="Telegram" icon="telegram">
+    Create a bot in Telegram (message @BotFather and follow its prompts), then paste the bot's access key. Reload wires it up for you. Open Telegram, message your bot, and you are connected. People chat with your agent from Telegram like any other conversation.
+  </Accordion>
+  <Accordion title="Slack" icon="slack">
+    Create an app in your Slack workspace, install it, and paste its keys. Then anyone in that workspace can direct message your agent from Slack and get replies in the same thread.
+  </Accordion>
+  <Accordion title="WhatsApp" icon="whatsapp">
+    Connect through your messaging provider account and paste your WhatsApp sending number. People message that number on WhatsApp and reach the agent you routed it to.
+  </Accordion>
+  <Accordion title="SMS" icon="message">
+    Connect through your messaging provider account and a text-capable number. People text that number from any phone and reach your agent. SMS is opt-in, so make sure your senders expect the message.
+  </Accordion>
+  <Accordion title="Email" icon="envelope">
+    Email works through your connected email. Connect your email from [Connecting tools](/connecting-tools), and your agents can send and receive email from there.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+Telegram and Slack are ready to connect today. WhatsApp and SMS are rolling out. Email connects through your tools on the [Connecting tools](/connecting-tools) page.
+</Note>
+
+## Decide who can reach it
+
+When you connect a channel you choose how it treats senders it has not seen before. You can change this later from the connected channels list.
+
+| Setting | What it does |
+| --- | --- |
+| **Open** | Recommended. Anyone who has your bot or number can chat, and the agent replies right away. No approval step. |
+| **Pair first** | New senders verify once with a pairing code before the agent responds. |
+| **Allowlist** | Only known senders you have added can message the channel. |
+| **Drop unknown** | Unknown senders are ignored until an admin connects them. |
+
+<Tip>
+Start with **Open** so a channel works the moment it is connected. Move to a stricter setting later if you need tighter control over who can reach an agent.
+</Tip>
+
+## Approve new senders
+
+If a channel is set to pair first, the first message from a new sender does not go straight to the agent. It shows up under **Pairing requests** on the Contact methods screen. Approve it, and that sender's next message wakes the agent and binds their conversation to it. Reject it to turn them away.
+
+You can also hand out a **pairing code**. Generate one for a channel, share it, and the first person to send it as a message pairs instantly with no approval needed. The code is shown once.
+
+New pairing requests appear within a few seconds, so you can keep the screen open while you wait for a first message to arrive.
+
+## Route to the right agent
+
+Every connected channel has a default agent that incoming conversations go to. On the connected channels list you can see, for each channel, which agent it routes to, its access setting, and whether it is live.
+
+You can also set a channel's **exposure**:
+
+- **Everyone** lets any agent in your workspace be bound to the channel.
+- **Specific agent** limits the channel to the one agent you routed it to.
+
+Want a single agent to have its own line? Open that agent and use its **Contact** panel, then select **Give this agent its own Telegram, SMS, or Slack**. That opens the same setup flow already pointed at that agent, so the channel routes straight to it.
+
+## Manage connected channels
+
+The **Connected channels** list shows every channel you have connected, with an at-a-glance summary of how many are live and how many need attention. Each row shows its status:
+
+- **Live** means the channel is working.
+- **Paused** means it is connected but not currently active.
+- **Needs attention** means something needs fixing, such as a detail that stopped working.
+
+From a channel's row you can change its exposure, generate a pairing code, or disconnect it. Disconnecting stops all messaging on that channel and removes its routing.
+
+## How your agents reach you back
+
+Reaching your agents goes both ways. So an agent can notify you, add a contact method for yourself. Open any agent, select its **Contact** panel, and add an email. That address becomes a place the agent can send you updates. You can add more than one and mark one as primary.
+
+Your saved contact methods show a **Verified** badge once they have been verified. Until then they still work as places an agent can reach you.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Connecting tools" icon="plug" href="/connecting-tools">
+    Connect email and other outside tools your agents can use.
+  </Card>
+  <Card title="Channels" icon="hashtag" href="/channels">
+    See how conversations with your agents work inside Reload.
+  </Card>
+  <Card title="Working with agents" icon="robot" href="/working-with-agents">
+    Chat, assign work, and get results from your team.
+  </Card>
+  <Card title="Members and roles" icon="users" href="/members-and-roles">
+    Control who can connect and manage channels.
+  </Card>
+</CardGroup>

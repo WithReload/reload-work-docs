@@ -1,0 +1,130 @@
+---
+title: "Memory"
+description: "Your team's shared brain: what your agents and people have learned, how to search it, and the graph view that shows how it all connects."
+---
+
+Reload keeps a shared memory for your workspace, a running record of what your team and agents have learned. Your agents read from it before they act, so they stay grounded in what you already know, and they add to it as they go. You can browse it, search it, and see the whole thing laid out as a map.
+
+Memory is shared, but not open to everyone. Agents only ever see the memories that have been shared with them, and you stay in control of what becomes part of your team's record.
+
+## Where memory comes from
+
+Your shared brain fills up three ways:
+
+- **Agents capture as they work.** When an agent learns something worth keeping, a decision you made, a fact about a customer, a preference you stated, it saves it to memory. You will see a card in the chat when it does.
+- **You save things yourself.** Type `/remember` in any chat to record something, or add a fact straight from the graph view. See [Working with agents](/working-with-agents).
+- **You connect outside content.** Link a knowledge source so material from the tools you already use flows into memory for your agents to draw on. See [Knowledge sources](/knowledge-sources).
+
+## Browse what your team remembers
+
+Open **Memory** from the sidebar. You get a clean, scannable list of what your workspace currently knows, newest first.
+
+### Search it
+
+There are two ways to search, side by side above the list:
+
+- **Ask a question in plain language.** This is the default. Type something like "What did we decide about pricing?" and Reload returns the most relevant memories, ranked by how closely they match.
+- **Switch to Keyword** to match exact words instead.
+
+Use the **Company** and **Mine** toggle to move between everything your workspace knows and just the memories you captured.
+
+When you are browsing by keyword, a filter bar lets you narrow by kind of memory, who captured it, who can see it, and when it was captured. The filters step aside during a plain-language question, where results are already ranked for you.
+
+### Open a memory
+
+Click any memory to expand it in place. You get the full text plus the details behind it:
+
+- **Kind** of memory and whether an agent or a person captured it.
+- **Confidence** in what it says, and how many **sources** back it up.
+- **Human access** and **agent access**, so you can see who and what can read it.
+- **When** it was captured and its **status**.
+- **Why** it was recorded, when that was noted.
+
+### Connected sources
+
+If you have linked any knowledge sources, they show as a strip on this page with each one's name, sync status, and how much has been indexed. You can connect a new source or disconnect one right here. Disconnecting a source removes it and its indexed content from memory. See [Knowledge sources](/knowledge-sources).
+
+## See it as a graph
+
+The list is the quick way in. The graph view is where you see how everything fits together. Click **Graph view** at the top of the Memory page to open it.
+
+The graph is an interactive map of what your team has learned and how it connects. Each dot is a memory, or one of the people, agents, and sources a memory is tied to. Lines run between them, labeled with the relationship, so you can trace how a decision connects to the person who made it or the source it came from.
+
+<Note>
+  Switch between **Company brain**, the whole picture across your team, and **My brain**, just what you and your agents touch, with the toggle in the header. Use **Search the brain** to jump to anything by name.
+</Note>
+
+### Read the map
+
+- **Color** marks the kind of thing a dot is, so decisions, facts, preferences, people, agents, and sources each read differently at a glance.
+- **Size** hints at how connected something is. The more a dot links to, the more central it sits.
+- To keep a large brain legible, the map opens with the most connected entities. A chip in the corner shows how many you are seeing, with **Show all** to reveal everything and **Show top 45** to fold it back down.
+
+### Move around
+
+- **Scroll or pinch** to zoom, **drag the canvas** to pan, and **drag a dot** to reposition it.
+- The controls in the bottom-right corner do the same by click: **Zoom in**, **Fit to view** to frame everything, and **Zoom out**.
+
+### Filter what you see
+
+The rail on the left narrows the map without leaving it:
+
+- **Connected sources** lists the outside sources you have linked, with a shortcut to connect another.
+- **Scope** filters by where a memory lives, from your whole organization down to a single channel or a private note.
+- **Recorded by** filters to the people and agents behind the memories.
+- **Entity types** filters by kind, when there is more than one kind on the map.
+
+Toggle any row to focus the map on just what you care about.
+
+## Inspect an entity
+
+Click any dot to open its details in the panel on the right. Click the empty canvas to close it again.
+
+<AccordionGroup>
+  <Accordion title="Brief and full memory" icon="file-lines">
+    A short summary up top, then the full memory with its **status** and a **confidence** level. Status tells you where a memory stands: **Current**, **Replaced** when newer information takes over, or **Contested** when sources disagree.
+  </Accordion>
+  <Accordion title="Where it came from" icon="link">
+    Who recorded it, when, where it came from, and why, plus how many sources it draws on. This is how you tell a well-supported memory from a one-off.
+  </Accordion>
+  <Accordion title="Facts" icon="list">
+    The individual facts attached to the entity, each tagged by type with its own confidence and provenance. When a fact replaces an earlier one, that is shown too.
+  </Accordion>
+  <Accordion title="Connected" icon="diagram-project">
+    The entities this one links to, with the relationship spelled out. Click any of them to jump straight there and keep exploring.
+  </Accordion>
+</AccordionGroup>
+
+Two more things you can do from the panel:
+
+- **Record a fact.** Type in the box at the bottom to add something to the company brain about this entity. It saves right away and appears in the list.
+- **Open page** to jump to the entity's page in your workspace notes, where you can read and edit the longer write-up. See [Calendar, notes, and wiki](/calendar-notes-wiki).
+
+## Control what your agents recall
+
+You decide what your team's shared brain holds and who can read it.
+
+Every memory carries its own access, one setting for which people can see it and one for which agents can. That is why an agent only ever recalls what has been shared with it.
+
+When something no longer belongs, an admin can **forget** it. Open the memory in the list and use the trash action, add a short reason for the record, and confirm. Your agents stop recalling it right away. It is kept for audit and an admin can restore it later.
+
+<Warning>
+  Forgetting a memory removes it from what your agents recall. It is reversible by an admin, but the reason you give is saved with it, so write something a teammate would understand later.
+</Warning>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Knowledge sources" icon="database" href="/knowledge-sources">
+    Bring content from the tools you already use into your shared memory.
+  </Card>
+  <Card title="Working with agents" icon="robot" href="/working-with-agents">
+    Save to memory with a slash command and watch agents capture as they go.
+  </Card>
+  <Card title="Calendar, notes, and wiki" icon="file-lines" href="/calendar-notes-wiki">
+    Read and edit the longer pages behind the entities in your brain.
+  </Card>
+  <Card title="Your Chief of Staff" icon="user-tie" href="/chief-of-staff">
+    Ask what your team knows and get a read on what is happening.
+  </Card>
+</CardGroup>

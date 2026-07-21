@@ -1,0 +1,183 @@
+---
+title: "Troubleshooting"
+description: "Quick fixes for the questions that come up most: no credits, an agent that will not reply, a connection that needs reconnecting, and an invite that did not arrive."
+---
+
+Most hiccups in Reload have a simple cause and a one-select fix. This page walks through the four we hear about most. Find the one that matches, follow the steps, and you are back to work.
+
+<CardGroup cols={2}>
+  <Card title="No credits" icon="coins" href="#no-credits-or-your-agents-have-paused">
+    Your balance hit zero and your agents paused.
+  </Card>
+  <Card title="An agent will not reply" icon="robot" href="#an-agent-is-not-replying">
+    You messaged an agent and nothing came back.
+  </Card>
+  <Card title="A connection needs reconnecting" icon="plug" href="#a-connection-needs-reconnecting">
+    A tool stopped working and shows needs attention.
+  </Card>
+  <Card title="An invite did not arrive" icon="envelope" href="#an-invite-did-not-arrive">
+    You sent an invite and your teammate never got it.
+  </Card>
+</CardGroup>
+
+## No credits, or your agents have paused
+
+Talking to your agents is always free. Credits are used when an agent finishes a task or a routine runs. If your balance reaches zero, your agents pause on that kind of work and pick straight back up the moment you top up or your plan renews. A job that was already running still finishes.
+
+Here is how to get moving again.
+
+<Steps>
+  <Step title="Check where you stand">
+    Click the credits counter at the top of the app, or open **Settings** and go to **Usage and credits**. You will see your remaining balance and a full history of what used credits. Any active member can view this.
+  </Step>
+  <Step title="Top up now">
+    Open **Settings**, go to **Billing**, and choose a top up. The credits land on your balance right away, and your agents carry on without waiting for the month to turn over.
+  </Step>
+  <Step title="Or wait for your monthly refresh">
+    Every plan includes a monthly allowance that refreshes at the start of each month. If you would rather not top up, your agents resume on their own when the new month begins.
+  </Step>
+</Steps>
+
+<Note>
+  In a channel, an agent that has run out of credits shows as **Silent** with the reason "out of budget for now" in the channel details. This clears the moment you have credits again.
+</Note>
+
+<AccordionGroup>
+  <Accordion title="I have credits but an agent still did not act">
+    Credits are not the issue. It is most likely that you mentioned the agent without tagging it. See [An agent is not replying](#an-agent-is-not-replying) below.
+  </Accordion>
+  <Accordion title="Did chatting use up my credits?">
+    No. Conversations, questions, and quick replies are always free. Credits are only used when an agent completes a task or a routine runs. See [How credits work](/credits).
+  </Accordion>
+  <Accordion title="How do I get more seats or a bigger allowance?">
+    Move to a larger plan. Each one includes more monthly credits, and you can top up any time in between. See [Plans](/plans).
+  </Accordion>
+</AccordionGroup>
+
+## An agent is not replying
+
+There are two places you talk to an agent: inside Reload, and from an outside app like your phone's chat. The fix depends on which one you are using.
+
+### Inside Reload
+
+The most common reason, by far, is that you mentioned the agent but did not tag it. In a channel, a plain `@name` notifies the agent but does not put it to work.
+
+<Steps>
+  <Step title="Tag the agent, do not just mention it">
+    Type `@`, then select the agent from the picker so a **Wake** chip appears above the send button. That tag is the signal that tells the agent to run and reply. If you typed the name by hand, the composer warns you the agent was mentioned but not tagged. Reselect it from the picker and send again.
+  </Step>
+  <Step title="Check the agent is in the channel">
+    Open the channel details and look under **Agents**. If the one you want is not there, add it from **Manage members**. An agent can only reply in a room it belongs to.
+  </Step>
+  <Step title="Check the agent is not held back">
+    In channel details, an agent set to **Silent** shows the reason next to it, such as paused in this channel, no tools enabled, blocked by an admin, or out of budget for now. Where you have permission, you get a one-tap way to bring it back.
+  </Step>
+  <Step title="Check the agent is not paused">
+    Open the agent's profile. If it was paused or removed, use **Resume** to bring it back. Removing an agent hides it and pauses any work it had scheduled, and you can restore it later.
+  </Step>
+</Steps>
+
+<Note>
+  Connected agents that run outside Reload have no one-to-one chat. They only take part in the channels you add them to. See [Connected agents](/external-agents).
+</Note>
+
+### From an outside app
+
+If people reach your agents over Telegram, Slack, and other channels, and a message is going unanswered, check the channel on the **Contact methods** screen.
+
+<AccordionGroup>
+  <Accordion title="The channel is not live">
+    On the **Connected channels** list, each channel shows a status. **Live** means it is working. **Paused** means it is connected but not active. **Needs attention** means a detail stopped working and the channel needs fixing. If it needs attention, reconnect it from its row.
+  </Accordion>
+  <Accordion title="A new sender is being turned away">
+    Every channel decides how it treats senders it has not seen before. If it is set to **Pair first**, a new sender has to verify once with a pairing code, or you approve their first message under **Pairing requests**, before the agent responds. **Allowlist** only lets known senders through, and **Drop unknown** ignores unknown senders entirely. If you want a channel that just works for anyone who has your bot or number, set it to **Open**.
+  </Accordion>
+  <Accordion title="It is routed to the wrong agent">
+    Every connected channel has a default agent that incoming conversations go to. Open the channel's row to see which agent it routes to, and change it if the messages should reach someone else.
+  </Accordion>
+  <Accordion title="I connected WhatsApp or SMS and it is not working yet">
+    Telegram and Slack are ready to connect today. WhatsApp and SMS are rolling out. Check back as they become available. See [Reaching your agents](/reaching-your-agents).
+  </Accordion>
+</AccordionGroup>
+
+## A connection needs reconnecting
+
+A connection links your workspace to an outside app like Gmail, Slack, or your CRM so your agents can act in it. A connection can drift out of health when the app's sign-in expires or is withdrawn. When that happens, Reload flags it, and an agent may tell you it cannot use a tool.
+
+<Steps>
+  <Step title="Open Connectors">
+    Open **Connectors** from the left. Filter to **Needs attention** to see just the connections that stopped working.
+  </Step>
+  <Step title="Select Reconnect">
+    The flagged connection shows a **Reconnect** button. Select it and finish the single sign-in, exactly as you did the first time.
+  </Step>
+  <Step title="Your agents pick it back up">
+    As soon as the connection is live again, your agents carry on using the tool. There is nothing else to set up.
+  </Step>
+</Steps>
+
+<Tip>
+  If a connect attempt was started and left unfinished, it waits for you as a **Reconnect** card, already filled in with the app and the access that was asked for. Finish it in one select without retyping anything.
+</Tip>
+
+<AccordionGroup>
+  <Accordion title="An agent says it cannot use a tool">
+    A few things can cause this. The connection may need attention, so reconnect it. The tool may be set to **Never**, or to **Needs approval** and waiting on you. Or the connection may be private to someone else. Open the app on the **Connectors** page to check its status, its per-tool permissions, and its visibility.
+  </Accordion>
+  <Accordion title="An agent is asking to connect a tool">
+    An agent can propose a connection when it needs a tool it does not have, but only a person can approve one. You will see a card in the channel and on your Connectors page showing which agent is asking, why, and the exact access it wants. Select **Approve and connect** to run the sign-in, or **Deny** to decline. See [Connecting tools](/connecting-tools).
+  </Accordion>
+  <Accordion title="Reconnecting is different from disconnecting">
+    Reconnecting refreshes an existing connection with a single sign-in and keeps your setup. Disconnecting is permanent: it revokes the app and deletes the stored sign-in, and to use it again you connect from scratch. If a tool just stopped working, reconnect it rather than disconnecting.
+  </Accordion>
+</AccordionGroup>
+
+## An invite did not arrive
+
+Inviting people is an owner or admin action, done in **Settings**, then **Members**. If a teammate says the invite never showed up, start here.
+
+<Steps>
+  <Step title="Check pending invitations">
+    In **Members**, open **Pending invitations**. Every invite you have sent but no one has accepted appears here, with its role and an expiry date. If it is listed, it was sent.
+  </Step>
+  <Step title="Confirm the email address">
+    Check the address on the invitation is correct. If there is a typo, **Cancel** the invite to free the seat, then send a fresh one to the right address.
+  </Step>
+  <Step title="Resend the email">
+    Select **Resend** on the invitation. This sends the email again, which helps if the first one was filtered or buried. Ask your teammate to check their spam and other folders too.
+  </Step>
+</Steps>
+
+<AccordionGroup>
+  <Accordion title="The invite was rejected when I sent it">
+    An invite is turned down with a clear message if the address already belongs to a member of this workspace, or is tied to another workspace. Check whether the person is already on your roster under **Members**.
+  </Accordion>
+  <Accordion title="The Invite button is greyed out">
+    You have reached your plan's seat limit, and the meter shows N of M seats used. Cancel a pending invitation to free the seat it was holding, or add capacity from [Plans](/plans).
+  </Accordion>
+  <Accordion title="The invitation expired">
+    Each invite has an expiry date shown next to it. If it has lapsed, select **Resend** to send a fresh one.
+  </Accordion>
+  <Accordion title="My teammate accepted but cannot see much">
+    Their access depends on the role you gave them. A **Viewer** is read-only, and a **Member** does the work but does not run the workspace. You can change anyone's role any time from their row in **Members**. See [Members and roles](/members-and-roles).
+  </Accordion>
+</AccordionGroup>
+
+## Still stuck
+
+If none of these fixes it, your [Chief of Staff](/chief-of-staff) is a good first port of call. Describe what you were trying to do and what happened, and it can point you to the right place or take the next step for you.
+
+<CardGroup cols={2}>
+  <Card title="How credits work" icon="coins" href="/credits">
+    What uses credits, and how to top up or upgrade.
+  </Card>
+  <Card title="Reaching your agents" icon="mobile" href="/reaching-your-agents">
+    Connect and manage the channels people message your agents on.
+  </Card>
+  <Card title="Connecting tools" icon="plug" href="/connecting-tools">
+    Keep your connections healthy and control what agents can do.
+  </Card>
+  <Card title="Members and roles" icon="users" href="/members-and-roles">
+    Invite people, manage pending invites, and set roles.
+  </Card>
+</CardGroup>

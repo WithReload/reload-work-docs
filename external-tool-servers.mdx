@@ -1,0 +1,149 @@
+---
+title: "External tool servers"
+description: "Add a tool server by URL to give your agents tools beyond the built-in apps, then control which agents get them and which tools they can use."
+---
+
+A tool server is an outside service that exposes a set of tools your agents can use. Reload already connects the apps most teams use, and for well-known apps that is the easy path. A tool server is for everything else: a service you run yourself, a niche provider, or any server that speaks the open Model Context Protocol (MCP) standard.
+
+You add a server once by pasting its web address, choose which of your agents can reach it, and Reload finds its tools for you. From then on your agents can call those tools the same way they use any other connection.
+
+<Note>
+  For popular apps like your calendar, inbox, or the services your team already runs, connect them from the **Apps** tab instead. It is a one-click sign-in with nothing to paste. See [Connecting tools](/connecting-tools). Add a tool server when the capability you want is not in the app list.
+</Note>
+
+## Where to add a server
+
+Adding a tool server is a more technical step than connecting an app, so it lives in its own area marked for developers. There are two ways in:
+
+- **From an agent.** Open an agent's **Connections**, go to the **Custom MCP** tab, and choose **Add MCP server by URL**. This is the natural path when you are setting up one teammate. See [Customizing an agent](/customizing-agents).
+- **From the command bar.** Open the command bar and choose **Go to MCP Servers** to open the servers area directly.
+
+The servers area lists every tool server you have added, with its status, address, and how many tools it offers. Use **My servers** for the ones available to all your agents and **Agent servers** for ones scoped to specific teammates.
+
+## Add a server
+
+<Steps>
+  <Step title="Start from a popular server, or from scratch">
+    The add form shows a short list of popular tool servers you can add in one click. Choose **Use** on one and its name, address, and sign-in method are filled in for you, so you just review and connect. Or fill the form in yourself for any other server.
+  </Step>
+  <Step title="Name it">
+    Give the server a name you will recognise later, like the service it connects to.
+  </Step>
+  <Step title="Choose who gets it">
+    Set the **Scope**:
+
+    - **All my agents** makes the server available to every agent you operate, including ones you create later.
+    - **Specific agents** lets you pick exactly which teammates get it. Choose one or more from the list.
+
+    There is no workspace-wide option on purpose. You always decide which agents a server reaches.
+  </Step>
+  <Step title="Paste the address">
+    Enter the server's web address in **Endpoint URL**. The server must be reachable on the public web at a secure (https) address. Leave **Transport** on its default unless the server's own docs tell you to pick the legacy option.
+  </Step>
+  <Step title="Set how it signs in">
+    Under **Authentication**, choose how the server checks you have access. See [Sign-in and keys](#sign-in-and-keys) below for the three options.
+  </Step>
+  <Step title="Add it">
+    Choose **Add server**. Reload connects to the server and finds its tools automatically. If the server signs in with the provider, choose **Add & connect** and a sign-in window opens right after.
+  </Step>
+</Steps>
+
+<Tip>
+  You can add the same server to more than one agent, and you can widen or narrow who gets it later. See [Choose which agents can use it](#choose-which-agents-can-use-it).
+</Tip>
+
+## Sign-in and keys
+
+A tool server can require access before it will hand over its tools. Reload supports three ways to prove it:
+
+- **None.** The server is open and needs no sign-in. It connects as soon as you add it.
+- **A key or token.** The server gives you an access key. Paste it when you add the server. It is stored securely, shown once, and never displayed again, so keep your own copy if the provider does not let you regenerate it.
+- **Sign in with the provider.** No key to paste. After you add the server, a sign-in window opens and you approve access in the provider's own screen. This is the same sign-in you would do anywhere else.
+
+If a server still needs to sign in, its row shows **Sign-in needed** or **Token needed** until you finish. Open the server to add the key or run the sign-in, and its tools become available once it connects.
+
+<Warning>
+  A key is shown to you once and then sealed away. Reload never displays it again and never puts it in a message or log. If you lose it, create a new one with the provider and add the new key to the server.
+</Warning>
+
+## Manage a server and its tools
+
+Open any server to see its details, its status, and the tools it offers.
+
+The status tells you where the server stands:
+
+- **Connected** means the last check succeeded and its tools are ready.
+- **Unverified** means it is added but not yet checked. Run a test to confirm it.
+- **Connection error** means the last attempt failed. Check the address and sign-in, then test again.
+
+Three actions sit at the top of the detail:
+
+- **Test connection** checks the server is reachable and signed in, and updates the status.
+- **Re-discover tools** asks the server for its current tools again. If any were added, removed, or changed, Reload tells you what changed, and flags any tool whose inputs changed so you can review it before your agents rely on it.
+- **Remove** deletes the server and its tools from your workspace.
+
+You can also **pause** a server with its enable switch. A paused server keeps all its settings and tools, but they are hidden from every agent until you switch it back on. Use this to take a server offline without setting it up again.
+
+### Control which tools an agent can use
+
+Every tool the server offers is listed, with the agent-facing description each tool carries. You are in control of the set:
+
+- **Turn a tool on or off.** Only the tools you leave on are offered to your agents. Turn off anything you do not want them to use.
+- **Edit a tool's description.** The description is what your agent reads to decide when and how to use a tool. Expand a tool and edit it to make the tool's job clearer, or to fit how your team works.
+- **Watch for the writes marker.** Tools that can make changes are marked **writes**. Your agent checks with you before it uses one of these for the first time, so nothing changes on the outside without your say-so.
+
+## Choose which agents can use it
+
+A server you shared with all your agents reaches every teammate you operate. To narrow it, open an agent's **Connections**, go to the **Custom MCP** tab, and choose **Sharing** on the server.
+
+From there you can switch between:
+
+- **All your agents**, including ones you create later.
+- **Specific agents**, where you pick exactly which teammates keep it.
+
+Save the change and Reload updates who can reach the server right away. Its sign-in stays put, so you never have to reconnect when you change who gets it.
+
+<Note>
+  The **Custom MCP** tab lists the servers you added by URL and shows their status for the agent you are looking at. First-party apps live under the **Apps** tab, where they connect in one click.
+</Note>
+
+## When an agent asks for a server
+
+An agent can propose a tool server it wants for its work. Instead of adding itself, it sends the request to you. The server waits, shown as pending your approval, until you review it. If it needs a key, you add the key at that point, and the server goes live once you approve. This keeps an agent from ever granting itself new tools or handling a credential on its own.
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="What is the difference between a tool server and an app?">
+    An app is a ready-made connection to a service Reload already supports, connected in one click from the Apps tab. A tool server is one you add by URL, for a service that is not in the app list or that your team runs itself. Both end up as tools your agents can use.
+  </Accordion>
+  <Accordion title="How many agents can one server reach?">
+    Share it with all your agents, or pick a specific set. When you pick a set you can include up to 25 agents on one server.
+  </Accordion>
+  <Accordion title="My server's tools changed. Do I have to add it again?">
+    No. Open the server and choose Re-discover tools. Reload picks up what was added, removed, or changed, and points out any tool whose inputs changed so you can review its description before your agents rely on it.
+  </Accordion>
+  <Accordion title="Can I stop using a server without deleting it?">
+    Yes. Open the server and turn off its enable switch to pause it. Its settings and tools are kept, but hidden from every agent until you switch it back on.
+  </Accordion>
+  <Accordion title="Where did the key I pasted go?">
+    It is stored securely and shown to you only once. Reload never displays it again and never includes it in a message or log. If you need it later, regenerate it with the provider and add the new one to the server.
+  </Accordion>
+</AccordionGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Customizing an agent" icon="sliders" href="/customizing-agents">
+    Assign a server's tools to a teammate and set how much it can do on its own.
+  </Card>
+  <Card title="Connecting tools" icon="plug" href="/connecting-tools">
+    Link the apps your team already uses, the one-click way.
+  </Card>
+  <Card title="Working with agents" icon="robot" href="/working-with-agents">
+    See how agents use their tools and check in before they act.
+  </Card>
+  <Card title="Members and roles" icon="users" href="/members-and-roles">
+    Control who can add servers and approve what agents ask for.
+  </Card>
+</CardGroup>
