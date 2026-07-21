@@ -1,0 +1,60 @@
+---
+title: "Agent Budgets and Rate Limits"
+sidebarTitle: "Budgets"
+description: "Cap what each agent and team can spend per day on LLM calls and tool usage. Agents plan inside their budget and pause automatically at the limit."
+---
+
+Budgets give you predictable, bounded AI spend without having to watch every agent manually. You set a daily limit, and the agent works within it — planning its tasks to fit what's available, and pausing automatically when the cap is reached. The Orchestrator notifies you so you can decide whether to increase the limit or let it reset the next day. Your costs stay visible and your bill stays under control.
+
+## Two budget types
+
+Reload tracks spend in two separate categories so you can control each independently:
+
+**LLM budget** caps the daily spend on model API calls for that agent. Because agents on Reload run on your own LLM keys (Claude, Codex, or Gemini), this spend appears on your provider bill at standard rates — no markup. The LLM budget limit is denominated in USD and measured against actual API spend.
+
+**Tool budget** caps the daily spend on paid tool API calls where applicable — for example, integrations that charge per request or per record accessed. Not all tools have associated costs, but for those that do, you can set a separate daily ceiling.
+
+You can set either or both budgets per agent, and combine them with a team-level cap that acts as an overall ceiling across all agents in a team.
+
+## How budgets work
+
+Agents don't simply spend until they hit a wall. Each agent tracks its own cumulative spend throughout the day and factors the remaining budget into how it plans and prioritizes work. If the remaining budget is tight, the agent will focus on the highest-priority tasks rather than starting work it can't complete.
+
+When an agent reaches its daily limit, it stops initiating new tasks. Work already in progress completes, but no new tool calls or model requests are started. The Orchestrator Agent registers the pause and sends you a notification — either in the dashboard or via your connected channel — so you know which agent has stopped and why.
+
+## Setting a budget
+
+<Steps>
+  <Step title="Open the agent's Budget settings">
+    Navigate to the agent you want to configure, open **Settings**, and select the **Budget** tab.
+  </Step>
+  <Step title="Set a daily LLM spend limit">
+    Enter the maximum USD amount this agent can spend per day on LLM API calls. For example, setting **$5/day** ensures a single agent's model usage never exceeds that amount in a calendar day.
+  </Step>
+  <Step title="Optionally set a team-level cap">
+    If this agent belongs to a team, you can set an overall daily cap for the entire team. The lower of the individual limit and the team cap applies — if the team has collectively spent its cap, individual agents with remaining budget will still pause.
+  </Step>
+  <Step title="Save your budget">
+    Click **Save**. The budget takes effect at the start of the next daily cycle, or immediately if the agent hasn't yet spent anything today.
+  </Step>
+</Steps>
+
+<Note>
+  Budgets reset daily at **midnight UTC**. An agent that paused at its limit will automatically resume accepting new tasks at the start of the next day, up to its fresh daily allowance.
+</Note>
+
+## What happens when a budget is hit
+
+When an agent reaches its daily limit:
+
+1. **The agent pauses** — it completes any action already underway, then stops starting new ones.
+2. **The Orchestrator notifies you** — you receive an alert identifying which agent paused, how much it spent, and what it was working on when it stopped.
+3. **You decide what to do** — you can increase the daily limit immediately (the agent resumes within its new allowance), or leave the limit in place and let it reset at midnight UTC.
+
+Any work the agent queued but hadn't started will remain pending and can resume once the budget is available again.
+
+## Frequently asked questions
+
+<Accordion title="Do budgets affect response quality?">
+  No. The agent uses the same model and the same configuration regardless of how close it is to its budget. Setting a budget does not change how the agent thinks or what it produces — it only controls when the agent stops initiating new work. Response quality is a function of your model choice and agent configuration, not your spend limit.
+</Accordion>

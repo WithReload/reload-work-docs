@@ -1,24 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "name": "Reload",
+  "projectType": "saas",
+  "projectName": "Reload",
+  "projectDescription": "Reload is an AI agent platform that lets individuals, teams, and businesses hire coordinated teams of AI agents to automate work across sales, marketing, ops, engineering, and support — running on your own LLM keys.",
   "theme": "luma",
-  "colors": {
-    "primary": "#848486",
-    "light": "#141418",
-    "dark": "#eaeaea"
-  },
-  "favicon": "/favicon.svg",
-  "logo": {
-    "light": "https://media.brand.dev/ceb261ee-c12b-4c08-8436-c38b70244909.svg",
-    "dark": "https://media.brand.dev/ceb261ee-c12b-4c08-8436-c38b70244909.svg"
-  },
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "Start free",
-      "href": "https://app.reload.work"
-    }
-  },
+  "primaryColor": "#848486",
+  "lightColor": "#141418",
+  "darkColor": "#eaeaea",
   "navigation": {
     "tabs": [
       {
@@ -82,5 +69,29 @@
         ]
       }
     ]
-  }
+  },
+  "keyFeatures": [
+    "Pre-built agent packs for 18+ business types (solo founders, startups, agencies, local businesses)",
+    "Coordinated multi-agent teams with an Orchestrator Agent that routes work and escalates when needed",
+    "Bring-your-own LLM keys (Claude, Codex, Gemini) — no token markup",
+    "Approval policies with dollar and action thresholds per agent",
+    "Tool scopes granting per-agent, per-action access to connected tools",
+    "Per-agent budgets and rate limits",
+    "Full audit trail of every message, tool call, and approval",
+    "SSO & SAML for enterprise workspaces",
+    "Sandboxed, isolated agent execution with no ambient access",
+    "Integrations with Notion, Slack, Gmail, Google Drive, HubSpot, GitHub, Linear, Stripe, and more"
+  ],
+  "publicApiSurface": [
+    "Agent hiring & configuration",
+    "Team creation and channel management",
+    "Orchestrator Agent routing rules",
+    "Approval policy thresholds",
+    "Tool scope grants",
+    "Budget and rate limit settings",
+    "Audit log export",
+    "LLM key management (Claude, Codex, Gemini)",
+    "Integration connections (Notion, Slack, Gmail, HubSpot, GitHub, Linear, Stripe)",
+    "Agent pack deployment"
+  ]
 }

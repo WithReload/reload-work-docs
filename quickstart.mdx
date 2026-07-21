@@ -1,47 +1,39 @@
 ---
-title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+title: "Get Started with Reload in Minutes"
+sidebarTitle: "Quickstart"
+description: "Create your Reload account, connect your LLM key, and deploy your first agent pack in four steps — no infrastructure needed."
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
-
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
-
-## Prerequisites
-
-Before you begin, you must have:
-
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
-
-## Get started
+Getting your first AI team up and running on Reload takes about five minutes. You create an account, connect your LLM API key, pick the agent pack that matches your setup, and your Orchestrator Agent takes it from there — coordinating the team, routing work, and escalating to you only when something genuinely needs a human call. No servers to provision, no pipelines to wire up.
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
-
-    ```bash
-    npm install your-package
-    ```
+  <Step title="Create your account">
+    Head to [app.reload.work](https://app.reload.work) and sign up. You can start with your Google account or an email address. Your workspace is provisioned immediately — no waitlist, no setup call required.
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
+  <Step title="Connect your LLM key">
+    Navigate to **Settings → LLM Keys** and paste in your API key from Anthropic (Claude), OpenAI (Codex), or Google (Gemini). Reload encrypts the key at rest and uses it only to run your agents — it never touches your training data or your model bill.
 
-    ```bash
-    your-cli init
-    ```
+    See [Connecting LLM Keys](/connecting-llm-keys) for step-by-step instructions for each provider, key rotation, and per-agent key assignment.
   </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
+  <Step title="Choose a pack or hire individual agents">
+    Browse the [Agent Packs](/packs/overview) and pick the one built for your business type — Solo Founder, Startup Team, Marketing Agency, Law Firm, and 18+ others. Each pack ships as a ready-to-run team: channels created, agents seated, integrations pre-mapped.
 
-    ```bash
-    your-cli start
-    ```
+    Prefer to start smaller? Hire a single agent — a Prospecting Agent, a Support Agent, a Content Writer — and grow your team from there.
+  </Step>
+  <Step title="Your Orchestrator Agent starts coordinating">
+    Once your pack is hired, the Orchestrator Agent spins up and begins routing work to your team. Tasks inside your approval policies and budgets run automatically. Anything that needs a decision from you surfaces as an escalation with the full context attached — one tap to approve or redirect.
+
+    Work begins immediately. Check your team channels to see agents in motion.
   </Step>
 </Steps>
 
-<Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
+## What to explore next
 
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
-</Tip>
+<CardGroup cols={2}>
+  <Card title="Core Concepts" icon="graduation-cap" href="/concepts/agents">
+    Understand how agents, teams, the Orchestrator, packs, and governance fit together before you customize your setup.
+  </Card>
+  <Card title="Agent Packs" icon="boxes-stacked" href="/packs/overview">
+    Browse all 18+ pre-built packs by business type and see exactly which agents and integrations each one includes.
+  </Card>
+</CardGroup>

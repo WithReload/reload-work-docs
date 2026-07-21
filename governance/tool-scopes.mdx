@@ -1,0 +1,61 @@
+---
+title: "Tool Scopes: Limit What Each Agent Can Access"
+sidebarTitle: "Tool Scopes"
+description: "Grant agents read or write access to specific tools and actions — so a support agent can view orders without touching billing, or send email without deleting records."
+---
+
+Tool scopes give you precise control over what each agent is allowed to do within every connected integration. Rather than granting an agent blanket access to a tool, you choose exactly which actions it can take — read but not write, send but not delete, create but not administer. This means your agents only ever have the access they need to do their job, nothing more.
+
+## How tool scopes work
+
+Each integration connected to Reload — Notion, HubSpot, Gmail, GitHub, Stripe, and others — exposes a set of discrete actions: things like **read**, **create**, **update**, **delete**, **send**, or **admin**. Tool scopes let you grant or deny each of those actions independently, per agent.
+
+A support agent might have read and send access to Gmail, but no ability to delete threads or manage labels. A bookkeeping agent might be allowed to read transactions and create invoices in Stripe, but never update or delete existing records. A code review agent might read pull requests and post comments on GitHub, but never merge or push.
+
+These permissions are enforced at the platform layer — not just in the agent's instructions, but in what it's actually capable of calling. If an action isn't scoped, the agent can't perform it, regardless of what it's asked to do.
+
+## Example scope configurations
+
+| Agent | Tool | Allowed Actions |
+|---|---|---|
+| Support Agent | Gmail | Read, Send |
+| Support Agent | HubSpot | Read orders, Create tickets |
+| Bookkeeping Agent | Stripe | Read transactions, Create invoices |
+| Bookkeeping Agent | Gmail | Send |
+| Code Review Agent | GitHub | Read PRs, Create comments |
+
+Use combinations like these as a starting point. Your actual scopes will depend on each agent's role and what it needs to accomplish its tasks.
+
+## Setting tool scopes
+
+<Steps>
+  <Step title="Open the agent's settings">
+    Navigate to the agent you want to configure and open its **Settings** panel.
+  </Step>
+  <Step title="Navigate to Tool Access">
+    Select the **Tool Access** tab within the agent settings.
+  </Step>
+  <Step title="Select an integration">
+    Choose the connected integration you want to configure from the list of available tools. Only integrations your workspace has connected will appear here.
+  </Step>
+  <Step title="Toggle each action">
+    For each available action on that integration, set the permission level:
+
+    - **Read** — the agent can retrieve and view data
+    - **Write** — the agent can create or update records
+    - **Admin** — the agent can manage the integration itself (see warning below)
+
+    Enable only the actions the agent genuinely needs to do its job.
+  </Step>
+  <Step title="Save your scopes">
+    Click **Save**. The new scopes take effect immediately. Repeat for each integration this agent uses.
+  </Step>
+</Steps>
+
+<Note>
+  Tool scopes and [approval policies](/governance/approval-policies) work together. An agent needs both the correct tool scope **and** to be within its approval policy limit before it can act. Granting a scope doesn't bypass a dollar or action threshold — both checks apply on every action.
+</Note>
+
+<Warning>
+  **Be cautious with Admin-level access.** Granting Admin on an integration allows the agent to manage that integration itself — which may include adding or removing connected accounts, changing settings, or accessing configuration data. Only grant Admin access to agents explicitly designed to manage your workspace integrations.
+</Warning>

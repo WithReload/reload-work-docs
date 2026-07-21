@@ -1,0 +1,69 @@
+---
+title: "CRM & Sales Integrations: HubSpot and Gmail"
+sidebarTitle: "CRM & Sales"
+description: "Connect HubSpot and Gmail to let Reload agents manage your pipeline, prospect for leads, track contacts, and send outbound emails automatically."
+---
+
+Your sales team moves faster when agents handle the repetitive work — updating records, sending follow-ups, filing tickets, and prospecting for new leads. By connecting HubSpot and Gmail to Reload, your agents gain full visibility into your pipeline and the ability to act on it, so your reps can focus on closing deals rather than data entry.
+
+## Tools
+
+<Tabs>
+  <Tab title="HubSpot">
+    HubSpot is the source of truth for your contacts, deals, and customer activity. Reload agents read and write HubSpot data to keep your CRM accurate and your pipeline moving without requiring manual updates from your team.
+
+    **What agents can do:**
+    - Read and update contact records and company profiles
+    - Create and advance deals through pipeline stages
+    - Create and manage support tickets
+    - Log call notes, meeting summaries, and activity history
+    - Update deal stages and properties based on email or conversation context
+
+    **Agents that use HubSpot:**
+    - Prospecting Agent — enriches and creates new contact records for qualified leads
+    - Pipeline Agent — updates deal stages and logs activities as deals progress
+    - Sales Engineer Agent — reads deal context to prepare technical proposals and responses
+    - Support Agent — creates and updates tickets from inbound customer requests
+    - Customer Success Agent — monitors account health and flags at-risk contacts
+
+    **Connection method:** OAuth. Click **Connect HubSpot** in Settings → Integrations and authorize Reload for your HubSpot portal. If your organization uses multiple portals, select the one you want to connect.
+  </Tab>
+  <Tab title="Gmail">
+    Gmail is the primary channel for outbound prospecting, customer communication, and internal coordination. Reload agents read your inbox for context and send emails on your behalf within the action scopes you configure.
+
+    **What agents can do:**
+    - Read inbox messages and threads for context
+    - Send emails from your connected account
+    - Organize emails with labels and filters
+    - Draft replies for human review before sending
+
+    **Agents that use Gmail:**
+    - Prospecting Agent — sends personalized first-touch outbound emails to new leads
+    - Pipeline Agent — sends follow-up emails triggered by deal stage changes in HubSpot
+    - Executive Assistant Agent — drafts and sends meeting requests and follow-up notes
+    - Email Marketing Agent — executes email campaigns and sequences
+    - Support Agent — reads inbound customer emails and sends acknowledgment replies
+
+    **Connection method:** OAuth. Click **Connect Gmail** in Settings → Integrations and sign in with the Google account you use for sales or support email. You can connect multiple Gmail accounts for different agents.
+  </Tab>
+</Tabs>
+
+<Warning>
+  Agents only send emails within their approved action scope. Before enabling email sending for any agent, review and configure its Tool Scopes in Settings → Agents → [Agent Name] → Tool Scopes. If you want an agent to draft emails for human review rather than send automatically, set the Gmail scope to **Draft only**.
+</Warning>
+
+## Common sales automation examples
+
+Once HubSpot and Gmail are connected, your sales agents can run end-to-end workflows with minimal human intervention. Here are three common patterns to get you started:
+
+<Accordion title="Prospecting Agent: build lists and send first-touch emails">
+  The Prospecting Agent identifies leads that match your ideal customer profile, enriches their contact data, and creates records in HubSpot. It then drafts and sends personalized first-touch emails via Gmail — including your value proposition and a clear call to action. Replies are routed back to your inbox for human follow-up.
+</Accordion>
+
+<Accordion title="Pipeline Agent: log deal updates and send follow-ups">
+  The Pipeline Agent monitors your HubSpot pipeline and triggers follow-up emails via Gmail when deals go stale or reach a new stage. It logs every interaction as a HubSpot activity, keeping your CRM accurate without requiring reps to update records manually after every call or email.
+</Accordion>
+
+<Accordion title="Support Agent: read Gmail, create tickets, reply to customers">
+  The Support Agent reads your Gmail inbox for inbound customer requests, creates a HubSpot ticket for each one, and sends an acknowledgment reply to the customer. It can also categorize tickets by priority and assign them to the right team member based on rules you define.
+</Accordion>

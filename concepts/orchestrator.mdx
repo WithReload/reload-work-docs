@@ -1,0 +1,63 @@
+---
+title: "The Orchestrator Agent: Your AI Chief of Staff"
+sidebarTitle: "Orchestrator"
+description: "The Orchestrator Agent is included free with every Reload workspace — it routes work between teams, escalates to humans, and keeps everything coordinated."
+---
+
+The Orchestrator Agent is the connective tissue of your Reload workspace. Where individual agents own specific tasks and teams own specific functions, the Orchestrator sits above all of it — routing incoming work to the right team, passing context across handoffs, and pulling you in precisely when a decision needs a human. You don't configure it manually, and you don't write rules for it. It learns your workspace as work flows through it, and it gets better at knowing when to act and when to ask.
+
+<Note>
+  The Orchestrator Agent is included free with every Reload workspace and every pack. It's always there, already running — you don't need to hire or configure it separately.
+</Note>
+
+## What the Orchestrator does
+
+### Routes incoming tasks to the right team
+
+When work arrives — a new lead, a content request, a support ticket, a question from you — the Orchestrator decides which team and which agents are best positioned to handle it. It considers the task, the agents available, and the current state of each team's channel before making the call. You don't need to address messages to specific agents; the Orchestrator handles dispatch.
+
+### Briefs teams on context and handoffs
+
+When the Orchestrator hands work from one team to another, it carries the context with it. The receiving team knows what came before, what was decided, and what they're expected to do next. Nothing has to be re-explained.
+
+### Escalates out-of-policy actions to a human
+
+Every agent has approval limits and a budget. When an agent hits a threshold it can't clear on its own — a spend above its limit, an action outside its permitted scope, an edge case it's not authorized to decide — the Orchestrator escalates to the right human in the right channel. The escalation includes full context: what the agent was doing, what it needs, and what the options are.
+
+### Surfaces items that need human attention
+
+Beyond hard policy limits, the Orchestrator flags things that are worth your attention even when they're technically in-policy — a deal that's gone quiet, a content piece that needs a final decision, a budget that's trending toward its cap. It builds a prioritized queue so you're spending your attention on what actually matters.
+
+### Logs everything to the audit trail
+
+Every routing decision, escalation, briefing, and handoff the Orchestrator makes is written to the audit trail. You have a complete record of how work moved through your workspace — what the Orchestrator did, when it did it, and why.
+
+## What the Orchestrator does NOT do
+
+The Orchestrator is not a decision-maker for high-stakes or high-judgment calls — it's a surfacer of them. It won't approve a deal above your set threshold, make a hire, commit to a contract, or override a policy on your behalf. When it encounters a decision that requires your judgment, it stops, escalates, and waits. You stay in control of the things that matter; the Orchestrator handles everything else.
+
+<Warning>
+  The Orchestrator will escalate rather than guess on anything outside its policy scope. If you find it escalating too frequently, review the approval limits on individual agents — the Orchestrator is enforcing the guardrails you set, not adding new ones.
+</Warning>
+
+## Working with the Orchestrator
+
+You interact with the Orchestrator the same way you interact with any agent — through channel messages. You can drop a task in any team channel and the Orchestrator will route it, or you can message the Orchestrator directly to ask about the state of work across your workspace.
+
+**Reviewing the escalation queue.** When the Orchestrator escalates an item, it appears in the relevant team channel with full context. Respond in the channel to unblock the agent: approve, redirect, or dismiss. The agent picks up where it left off.
+
+**Responding to cross-team handoffs.** When the Orchestrator briefs a team on a handoff from another function, the briefing appears in that team's channel. Review it, add context if you have it, or let the team proceed autonomously.
+
+**Asking for a status summary.** You can ask the Orchestrator directly — "What's the state of the sales pipeline?" or "What's waiting for my approval?" — and it will compile an answer from across your workspace.
+
+<CardGroup cols={3}>
+  <Card title="Agents" icon="robot" href="/concepts/agents">
+    Learn how individual agents are configured with roles, tools, and approval limits.
+  </Card>
+  <Card title="Teams" icon="users" href="/concepts/teams">
+    See how agents are grouped into functional teams with shared channels and context.
+  </Card>
+  <Card title="Approval Policies" icon="shield-check" href="/governance/approval-policies">
+    Set the thresholds that determine when the Orchestrator escalates to you.
+  </Card>
+</CardGroup>

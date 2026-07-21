@@ -1,0 +1,60 @@
+---
+title: "Audit Trail: A Complete Record of Agent Actions"
+sidebarTitle: "Audit Trail"
+description: "Every message, tool call, and approval is logged with who acted, what they did, and why — exportable to your compliance and auditing systems."
+---
+
+The Reload audit trail is a complete, tamper-evident record of everything your agents do. Every message, every tool call, every approval decision — all of it is captured with a timestamp, the identity of the agent or person involved, and the full context of what happened. Whether you need to answer a compliance question, investigate an unexpected outcome, or simply verify that a task ran correctly, the audit trail gives you an authoritative, exportable record you can rely on.
+
+## What gets logged
+
+Reload logs every event in an agent's lifecycle. The audit trail captures:
+
+- **Agent messages and outputs** — the full content of every message sent and received by each agent, including prompts, reasoning, and responses
+- **Tool calls** — every read and write operation an agent performs on a connected tool, including the exact parameters passed and the result returned
+- **Approvals granted or denied** — every escalation raised by an agent, the decision made (approve or deny), who made the decision, and any reason provided
+- **Timestamps** — the precise date and time of every event, in UTC
+- **Agent identity** — which agent performed each action, so you can filter and trace a full session for any individual agent
+
+Nothing is omitted to save space or simplify the record. If an agent touched something, it's in the log.
+
+## Viewing the audit trail
+
+You can access the audit trail directly from the Reload dashboard:
+
+1. Open the **Audit Trail** section in the main navigation.
+2. Use the filter controls to narrow the log by:
+   - **Agent** — see all events for a specific agent
+   - **Team** — view activity across all agents in a team
+   - **Date range** — focus on a specific window of time
+   - **Action type** — filter to tool calls, approvals, messages, or a combination
+3. Click any log entry to expand it and see the full event detail — including message content, tool parameters, and the agent's stated reasoning at that point.
+
+The filtered view updates in real time as new events are logged, so you can monitor an active agent's session as it runs.
+
+## Exporting audit logs
+
+When you need to share logs with auditors, load them into a SIEM, or archive them externally, Reload supports two export formats:
+
+- **CSV** — suitable for spreadsheet review, audit submissions, and most compliance workflows
+- **JSON** — structured format compatible with log management platforms, SIEM tools, and custom pipelines
+
+To export, apply your filters in the audit trail view, then click **Export**. The export includes every event matching your current filter criteria.
+
+<Note>
+  Enterprise plans include dedicated log retention with configurable retention periods, direct integration with your existing audit infrastructure, and a log export API for programmatic access. Contact [sales@reload.work](mailto:sales@reload.work) to discuss your requirements.
+</Note>
+
+## Frequently asked questions
+
+<Accordion title="How long are logs retained?">
+  Log retention depends on your plan. Standard plans retain logs for a rolling window. Enterprise plans include configurable retention periods — you can set the retention duration to match your compliance requirements, whether that's 90 days, one year, or longer. Your Reload success manager can help you configure the right policy.
+</Accordion>
+
+<Accordion title="Can I export logs programmatically?">
+  Yes, on Enterprise plans. The log export API lets you pull structured audit data into your own systems on a schedule or in response to events — no manual dashboard exports required. This makes it straightforward to feed Reload audit logs into a SIEM, a data warehouse, or an automated compliance workflow. Reach out to [sales@reload.work](mailto:sales@reload.work) to get access.
+</Accordion>
+
+<Accordion title="Are LLM prompt contents logged?">
+  Yes. Full message content is logged for every agent interaction — including the prompts sent to the model, the model's responses, and any intermediate reasoning the agent produces. This means you have a complete, readable record of what the agent was thinking and doing at every step, not just a summary of outcomes.
+</Accordion>

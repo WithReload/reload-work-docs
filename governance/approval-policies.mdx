@@ -1,0 +1,65 @@
+---
+title: "Approval Policies: Control What Agents Do Automatically"
+sidebarTitle: "Approval Policies"
+description: "Set dollar and action thresholds per agent. Work inside the limit runs itself; anything above it queues for human review with full context attached."
+---
+
+Approval policies let you define exactly how much autonomy each agent has. Work that falls within the policy runs automatically and is logged — no interruption, no delay. Work that falls outside the policy doesn't silently fail or proceed unchecked; it queues in your approvals feed with the full context attached, so the right person can make a fast, informed decision. You stay in control without becoming a bottleneck.
+
+## How approval policies work
+
+Every agent on Reload operates inside a policy you define. There are two types of threshold you can set:
+
+**Dollar thresholds** cap the financial impact of any single autonomous action. For example, you might auto-approve all invoices under $500 and route anything above that for human review. The agent knows its limit and handles everything it can — escalating only when it needs to.
+
+**Action thresholds** control which types of operations an agent can perform without asking. You might allow an agent to send emails automatically but require approval before it deletes records or creates contracts. You set this per action type, per agent.
+
+When work is in policy, the agent executes it and logs it — you'll see it in the audit trail, but it won't interrupt you. When work is out of policy, the agent pauses and opens an item in the approvals feed. That item includes what the agent wants to do, why it determined this action was necessary, and what data it's acting on. You get everything you need to approve or reject with confidence.
+
+## Setting an approval policy
+
+<Steps>
+  <Step title="Open the agent's settings">
+    Navigate to the agent you want to configure and open its **Settings** panel.
+  </Step>
+  <Step title="Navigate to Approval Policies">
+    Select the **Approval Policies** tab within the agent settings.
+  </Step>
+  <Step title="Set a dollar limit">
+    Enter the maximum dollar value the agent can act on autonomously per transaction. Leave this field blank or set it to unlimited for agents that don't handle spend.
+  </Step>
+  <Step title="Set action-level permissions">
+    For each action type available to this agent, choose one of three settings:
+
+    - **Allow** — the agent performs this action automatically
+    - **Require approval** — the agent queues this action for human review before proceeding
+    - **Deny** — the agent cannot perform this action at all
+  </Step>
+  <Step title="Save your policy">
+    Click **Save**. The policy applies to the agent immediately — any in-flight tasks will be evaluated against the new policy on their next action.
+  </Step>
+</Steps>
+
+## Reviewing the approvals queue
+
+When an agent hits an out-of-policy threshold, an item appears in your approvals feed. Each item shows:
+
+- **What** the agent wants to do (the specific action and its parameters)
+- **Why** the agent determined this action was needed (its reasoning and the task context)
+- **What data** it's acting on (the record, amount, contact, or file involved)
+
+You can approve or reject with a single click. Approved actions execute immediately; the agent picks up where it paused. Rejected actions are logged with your reason, and the agent is notified so it can adjust its plan.
+
+<Warning>
+  Denying an approval only blocks the queued action and any future actions that depend on it. It does not undo work the agent has already completed. If an agent has already written a draft or read a record, that work stands — only the pending action is stopped.
+</Warning>
+
+<Tip>
+  If your team uses a shared communication channel (like **#ops** in Slack), connect the Orchestrator Agent to post approval requests there. Your team gets a single, unified inbox for all agent escalations — no need to check the Reload dashboard separately for urgent items.
+</Tip>
+
+## Frequently asked questions
+
+<Accordion title="Can I set different policies per team vs. per agent?">
+  Policies are configured per agent — each agent has its own independent approval policy. If you manage multiple agents within a team, you'll set thresholds for each one individually. This gives you fine-grained control: your bookkeeping agent can have strict financial thresholds while your research agent has none. Team-level budget caps are separate from approval policies and are configured under [Budgets](/governance/budgets).
+</Accordion>

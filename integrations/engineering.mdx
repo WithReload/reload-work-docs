@@ -1,0 +1,65 @@
+---
+title: "Engineering Integrations: GitHub and Linear"
+sidebarTitle: "Engineering"
+description: "Connect GitHub and Linear to let Reload agents review pull requests, flag regressions, file tickets, and keep your engineering workflow moving."
+---
+
+Engineering teams lose significant time to work that agents can handle: reviewing pull requests for common issues, monitoring CI pipelines for regressions, filing detailed bug reports, and keeping Linear tickets up to date. By connecting GitHub and Linear to Reload, your engineering agents become active participants in your development workflow — catching problems earlier and reducing the manual overhead that slows teams down.
+
+## Tools
+
+<Tabs>
+  <Tab title="GitHub">
+    GitHub is where your code lives and where your team collaborates on changes. Reload agents connect to GitHub to participate in your code review process, monitor CI status, and flag issues before they reach production.
+
+    **What agents can do:**
+    - Read pull requests and associated diffs
+    - Create structured inline and summary review comments
+    - Check CI/CD pipeline status and test results
+    - Flag regressions, breaking changes, and potential security issues
+    - Read repository contents for context (README, configuration files, docs)
+
+    **Agents that use GitHub:**
+    - Code Review Agent — reviews every PR automatically, posts structured feedback, and flags blockers for human reviewers
+    - QA Agent — monitors CI runs, detects regressions, and correlates test failures with recent changes
+
+    **Connection method:** OAuth. Click **Connect GitHub** in Settings → Integrations and authorize Reload for your GitHub organization. You can restrict access to specific repositories after connecting.
+  </Tab>
+  <Tab title="Linear">
+    Linear is the issue tracker that keeps your engineering team aligned on what needs to be built and fixed. Reload agents create, update, and triage Linear issues based on real events — test failures, user feedback, PR blockers — so your backlog stays accurate without manual effort.
+
+    **What agents can do:**
+    - Create new issues with full context (steps to reproduce, logs, screenshots)
+    - Update issue status, priority, and assignee
+    - Read project and cycle status to understand current workload
+    - File bug reports with reproduction context attached automatically
+    - Link issues to relevant PRs or commits
+
+    **Agents that use Linear:**
+    - Product Manager Agent — creates issues from user feedback and keeps roadmap status current
+    - QA Agent — files bug reports with full reproduction context when CI fails or regressions are detected
+    - Feedback Agent — converts customer feedback into properly formatted Linear issues
+
+    **Connection method:** OAuth. Click **Connect Linear** in Settings → Integrations and authorize Reload for your Linear workspace.
+  </Tab>
+</Tabs>
+
+## Typical engineering workflow
+
+When GitHub and Linear are both connected, your engineering agents can operate across the full development lifecycle — from code review to bug triage.
+
+<Accordion title="Code Review Agent: review every PR and flag blockers">
+  The Code Review Agent runs automatically when a new pull request is opened. It reads the diff, checks for common issues (logic errors, missing tests, security anti-patterns, breaking API changes), and posts a structured review comment directly on the PR. If it finds a blocker, it requests changes and notifies the author. This reduces the time senior engineers spend on first-pass reviews.
+</Accordion>
+
+<Accordion title="QA Agent: monitor CI and file Linear issues">
+  The QA Agent watches your CI pipeline for failures and regressions. When a test suite fails, it correlates the failure with recent commits, identifies the likely cause, and files a Linear issue with the full reproduction context — including the failing test name, error output, and a link to the CI run. Your engineers receive a ready-to-act ticket rather than a raw CI failure notification.
+</Accordion>
+
+<Accordion title="Product Manager Agent: turn feedback into Linear tickets">
+  The Product Manager Agent collects user feedback from connected sources and converts it into properly formatted Linear issues, complete with priority, labels, and project assignment. It also monitors cycle progress and updates roadmap status in Notion, keeping stakeholders informed without requiring manual status updates.
+</Accordion>
+
+<Note>
+  Engineering agents — including the Code Review Agent, QA Agent, and Product Manager Agent — are included in the **Indie Builder** and **Startup Team** packs. You can also add individual engineering agents to any plan. Visit [app.reload.work](https://app.reload.work) to get started.
+</Note>

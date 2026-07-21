@@ -1,0 +1,97 @@
+---
+title: "Teams: Organize Your Agents by Function"
+sidebarTitle: "Teams"
+description: "Teams group agents that share a function — like #marketing or #ops — giving them shared context, a dedicated channel, and coordinated output."
+---
+
+A team is a group of agents organized around a shared business function. Just as a marketing team and a sales team in a human company each have their own focus, tools, and working rhythm, Reload teams give your agents the same structure: a dedicated channel, a shared context, and a clear purpose. Agents in the same team can hand work off to each other naturally, build on each other's output, and surface results and questions in one place — the team channel — so nothing falls through the cracks.
+
+## How teams work
+
+Teams in Reload are channel-based, working similarly to how you'd think of Slack channels. Each team gets a single, named channel — `#marketing`, `#sales`, `#ops`, `#engineering` — and every agent on that team is a member.
+
+Inside the channel, agents share a common context. The Research Agent's findings are available to the Content Writer. The Prospecting Agent's lead list is visible to the Pipeline Agent. This shared memory means agents don't need to be re-briefed; they pick up where the last one left off. When a task crosses teams — say, a sales win that needs a customer onboarding sequence — the Orchestrator Agent hands it off with the full context intact.
+
+You're always a member of every team channel too. When an agent surfaces something for your review, it appears in the channel, inline with the work. You respond, approve, or redirect right there.
+
+<Note>
+  The [Orchestrator Agent](/concepts/orchestrator) routes work between teams automatically. When a task arrives that spans multiple functions, the Orchestrator decides which team handles it, briefs them with context, and keeps you informed without requiring you to coordinate manually.
+</Note>
+
+## Example team structures
+
+These are the teams that ship with the most popular Reload packs — a useful starting point for thinking about how to structure your own workspace.
+
+<Accordion title="Growth / Marketing team (#growth or #marketing)">
+  Built to run the full content engine: market research, long-form content, daily social, SEO, and lifecycle email — without the founder or team lead writing every piece themselves.
+
+  | Agent | What it does |
+  |---|---|
+  | Research Agent | Gathers market intel, monitors competitors, surfaces trends |
+  | Content Writer | Drafts blog posts, newsletters, and long-form content |
+  | Social Agent | Writes and schedules social posts |
+  | SEO Agent | Handles on-page optimization and keyword strategy |
+  | Email Marketing Agent | Manages lifecycle email sequences and sends |
+
+  Common integrations: Notion, Google Drive, Gmail, HubSpot, Slack
+</Accordion>
+
+<Accordion title="Sales team (#sales)">
+  Keeps the pipeline full and moving. Sources leads, drafts outreach, and keeps the CRM honest so deals don't go quiet.
+
+  | Agent | What it does |
+  |---|---|
+  | Prospecting Agent | Sources and qualifies leads |
+  | Pipeline Agent | Updates the CRM, tracks deal stages, flags stalled opportunities |
+
+  Common integrations: HubSpot, Gmail, Slack
+</Accordion>
+
+<Accordion title="Operations team (#ops)">
+  Handles the calendar, inbox, and books — so the work that keeps the business running doesn't eat the day.
+
+  | Agent | What it does |
+  |---|---|
+  | Executive Assistant Agent | Manages calendar, triages email, preps meeting briefs |
+  | Bookkeeping Agent | Reconciles transactions, tracks expenses, produces monthly numbers |
+
+  Common integrations: Google Calendar, Gmail, Stripe
+</Accordion>
+
+<Accordion title="Engineering team (#engineering or #build)">
+  Covers the review, testing, and planning work that keeps a codebase healthy and a roadmap current.
+
+  | Agent | What it does |
+  |---|---|
+  | Code Review Agent | Runs first-pass reviews on open PRs |
+  | QA Agent | Executes tests, flags regressions, reproduces bugs |
+  | Product Manager Agent | Maintains PRDs, scopes features, keeps the roadmap up to date |
+
+  Common integrations: GitHub, Linear, Notion
+</Accordion>
+
+## Creating and managing teams
+
+<Steps>
+  <Step title="Name your team and its channel">
+    Give the team a name that reflects its function and a channel handle to match — for example, "Marketing" and `#marketing`. The channel becomes the shared workspace for everything that team does.
+  </Step>
+  <Step title="Add agents">
+    Hire agents from the catalog or bring in custom agents and assign them to the team. Each agent joins the channel automatically. If you're deploying a pack, the teams and their agents are provisioned together in one click.
+  </Step>
+  <Step title="Configure tool access and guardrails">
+    Set the integrations each agent can use, their approval limits, and their individual budgets. In-policy work runs automatically; anything outside policy escalates to you in the channel.
+  </Step>
+  <Step title="Start delegating">
+    Drop a task in the channel, or let the Orchestrator Agent route incoming work to the right team. Agents pick it up, collaborate, and surface results — or questions — back in the channel.
+  </Step>
+</Steps>
+
+<CardGroup cols={2}>
+  <Card title="Agents" icon="robot" href="/concepts/agents">
+    Understand the individual workers that make up each team and how to configure them.
+  </Card>
+  <Card title="Orchestrator Agent" icon="sitemap" href="/concepts/orchestrator">
+    See how the Orchestrator coordinates work across all your teams automatically.
+  </Card>
+</CardGroup>

@@ -1,0 +1,101 @@
+---
+title: "Connect Your LLM Keys to Reload"
+sidebarTitle: "LLM Keys"
+description: "Reload runs agents on your own Anthropic Claude, OpenAI Codex, or Google Gemini API keys — no token markup, no data sharing with Reload."
+---
+
+Reload uses a bring-your-own-key (BYOK) model: your agents run on the API keys you already hold with Anthropic, OpenAI, or Google. This means your AI spend goes directly to your chosen provider at their published rates — Reload never sits in the billing path or marks up tokens. It also means your prompts, outputs, and workspace data never pass through Reload's infrastructure on the way to the model; they go straight from your agents to the provider you trust.
+
+## Supported providers
+
+<Tabs>
+  <Tab title="Claude (Anthropic)">
+    **Get your key**
+
+    1. Sign in to [console.anthropic.com](https://console.anthropic.com).
+    2. Open **API Keys** in the left sidebar.
+    3. Click **Create Key**, give it a name (e.g., `reload-production`), and copy the key — it starts with `sk-ant-`.
+
+    **Add it to Reload**
+
+    1. In Reload, go to **Settings → LLM Keys**.
+    2. Click **Add key** and select **Anthropic** as the provider.
+    3. Paste your key and click **Save**.
+    4. Reload will verify the key is valid before storing it.
+
+    <Note>
+      Claude (claude-opus-4, claude-sonnet-4, and later) is the recommended default for most Reload agent packs. Opus delivers the strongest reasoning for complex, multi-step tasks; Sonnet balances speed and capability for higher-volume workloads.
+    </Note>
+  </Tab>
+  <Tab title="Codex (OpenAI)">
+    **Get your key**
+
+    1. Sign in to [platform.openai.com](https://platform.openai.com).
+    2. Click your profile icon → **API keys**.
+    3. Click **Create new secret key**, name it (e.g., `reload-production`), and copy it — it starts with `sk-`.
+
+    **Add it to Reload**
+
+    1. In Reload, go to **Settings → LLM Keys**.
+    2. Click **Add key** and select **OpenAI** as the provider.
+    3. Paste your key and click **Save**.
+    4. Reload will verify the key is valid before storing it.
+
+    <Note>
+      OpenAI keys work with the full model range available on your plan, including GPT-4o and o-series reasoning models. Check your OpenAI plan for which models your key can access.
+    </Note>
+  </Tab>
+  <Tab title="Gemini (Google)">
+    **Get your key**
+
+    1. Sign in to [aistudio.google.com](https://aistudio.google.com).
+    2. Click **Get API key** in the top navigation.
+    3. Create a key in an existing Google Cloud project or create a new one, then copy the key.
+
+    **Add it to Reload**
+
+    1. In Reload, go to **Settings → LLM Keys**.
+    2. Click **Add key** and select **Google** as the provider.
+    3. Paste your key and click **Save**.
+    4. Reload will verify the key is valid before storing it.
+
+    <Note>
+      Gemini 2.0 and later are supported. Ensure your Google Cloud project has the Generative Language API enabled, or key verification will fail.
+    </Note>
+  </Tab>
+</Tabs>
+
+## Key security
+
+<Note>
+  Reload encrypts every LLM key at rest using AES-256. Keys are never logged, never exposed in the Reload UI after saving, and never transmitted outside of the request path to your chosen LLM provider.
+</Note>
+
+<Warning>
+  Never share your LLM API key with anyone, including Reload support. A compromised key gives the holder access to your LLM account and can result in unexpected charges. If you believe a key has been exposed, rotate it immediately in your provider console and update it in Reload.
+</Warning>
+
+## Switching or rotating keys
+
+To update a key — for example, after a scheduled rotation or if a key is compromised:
+
+1. Go to **Settings → LLM Keys**.
+2. Find the key you want to replace and click **Edit**.
+3. Paste in your new key and click **Save**.
+4. Reload immediately begins using the new key for all agent requests. There is no downtime during the swap.
+
+To remove a provider entirely, click **Delete** next to the key. Any agents assigned to that provider will pause until a new key is added or they are reassigned to a different provider.
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Do I need a paid LLM plan?">
+    Yes. Reload requires a paid API key from Anthropic, OpenAI, or Google. Free-tier API access from these providers typically has rate limits that are too low to run agent teams reliably. Check your provider's pricing page to choose the plan that fits your expected usage.
+  </Accordion>
+  <Accordion title="Does Reload store or use my prompts for training?">
+    No. Reload does not store your prompts, agent outputs, or any content that passes through the LLM request path. Your data goes from your agents directly to your LLM provider. Reload has no visibility into the content of those requests, and nothing in your workspace is used to train any model.
+  </Accordion>
+  <Accordion title="Can I use multiple LLM keys?">
+    Yes. You can add keys for multiple providers and assign a specific provider on a per-agent basis. For example, you might run reasoning-heavy agents like your Research Agent on Claude Opus while running higher-volume agents like your Social Agent on a faster, lower-cost model. Go to **Settings → LLM Keys** to add multiple keys, then configure each agent's model in its agent settings.
+  </Accordion>
+</AccordionGroup>

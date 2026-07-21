@@ -1,0 +1,60 @@
+---
+title: "Set Up SSO and SAML for Your Reload Workspace"
+sidebarTitle: "SSO & SAML"
+description: "Connect your identity provider to Reload with SAML 2.0 — so your team signs in through Okta, Azure AD, or Google Workspace with no extra passwords."
+---
+
+With SSO enabled, your team accesses Reload using the same credentials they already use for the rest of your company's tools. There are no separate Reload passwords to manage, no extra accounts to provision manually, and no risk of someone retaining access after they leave — because access flows entirely through your identity provider. Your IT team stays in control from day one.
+
+## Supported identity providers
+
+Reload SSO is built on SAML 2.0, which means it works with any compliant identity provider. Commonly used providers include:
+
+- **Okta**
+- **Microsoft Azure Active Directory (Azure AD)**
+- **Google Workspace**
+- **OneLogin**
+- Any other SAML 2.0-compatible IdP
+
+If your provider supports SAML 2.0 federation, it will work with Reload. Contact [sales@reload.work](mailto:sales@reload.work) if you want to confirm compatibility before starting setup.
+
+## What SSO enables
+
+Connecting your identity provider to Reload gives your IT and security teams a number of controls they wouldn't have with individual account login:
+
+- **Centralized access management**: Provision and deprovision Reload access directly through your IdP. When someone joins or leaves, their Reload access updates automatically.
+- **No separate Reload passwords**: Your team authenticates entirely through your IdP — Reload never stores a password for SSO users.
+- **MFA enforcement via your IdP**: Any multi-factor authentication policies you've configured in your identity provider apply automatically when users sign in to Reload.
+- **SCIM provisioning**: Where supported by your IdP, SCIM enables automated user lifecycle management — creating, updating, and deactivating accounts without manual steps.
+
+## Enabling SSO
+
+<Steps>
+  <Step title="Request SSO activation">
+    Contact [sales@reload.work](mailto:sales@reload.work) or reach out to your dedicated success manager to enable SSO for your workspace. SSO is available on Enterprise plans.
+  </Step>
+  <Step title="Obtain your SAML metadata from your IdP">
+    In your identity provider's admin console, locate the SAML application settings and copy your **metadata URL** or download the **metadata XML file**. This contains the information Reload needs to trust your IdP.
+  </Step>
+  <Step title="Paste the metadata into Reload workspace settings">
+    In Reload, navigate to **Workspace Settings → Security → SSO**. Paste your metadata URL or upload the XML file. Reload will parse the configuration automatically.
+  </Step>
+  <Step title="Test with a pilot user">
+    Before rolling out to the full team, test the SSO flow end-to-end with a single pilot user account. Confirm they can sign in via the IdP and that their role and permissions look correct inside Reload.
+  </Step>
+  <Step title="Enforce SSO-only login">
+    Once you're confident the integration is working, go to **Workspace Settings → Security** and enable **SSO-only login**. This disables password-based login for all workspace members and requires every user to authenticate through your IdP.
+  </Step>
+</Steps>
+
+<Warning>
+  Once SSO-only login is enforced, password-based login is disabled for **all** workspace members — including admins. Make sure your IdP is correctly configured and that at least one admin account has verified SSO access before enabling this setting.
+</Warning>
+
+<Tip>
+  Always test the SSO flow with a non-admin user account before enforcing SSO for the entire workspace. This confirms that standard member permissions work correctly and avoids locking out your team due to a misconfiguration.
+</Tip>
+
+<Note>
+  SCIM provisioning availability depends on your identity provider and plan configuration. Contact your dedicated success manager to confirm whether SCIM is supported for your IdP and to get it enabled on your workspace.
+</Note>

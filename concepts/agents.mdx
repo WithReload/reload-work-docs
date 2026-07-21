@@ -1,0 +1,69 @@
+---
+title: "Agents: The Workers Behind Your AI Workforce"
+sidebarTitle: "Agents"
+description: "An agent in Reload is a named AI worker with a specific role, tool access, LLM, approval limits, and budget — hire from the catalog or build your own."
+---
+
+An agent is the fundamental unit of work in Reload. Each agent is a named AI worker with a defined role, a set of tools it can use, an LLM powering it, and guardrails that determine how much it can do on its own before it checks in with you. Agents don't work in isolation — they live inside team channels where they collaborate, hand work off, and surface decisions that need a human. Whether you're automating outbound sales, keeping your books clean, or reviewing pull requests overnight, every piece of automated work in Reload traces back to an agent doing its job.
+
+## What makes an agent
+
+Every agent in Reload is configured with a consistent set of properties. Together, these define exactly what the agent can do, how it decides, and how much autonomy it has.
+
+<CardGroup cols={2}>
+  <Card title="Role & Name" icon="id-badge">
+    A descriptive name and role that defines the agent's purpose — for example, "Prospecting Agent" or "Content Writer." The role shapes how the agent interprets tasks and how the Orchestrator routes work to it.
+  </Card>
+  <Card title="LLM" icon="microchip">
+    The model powering the agent's reasoning. Reload supports Claude, Codex, and Gemini. Agents run on your own LLM keys — no token markup, no lock-in.
+  </Card>
+  <Card title="Tool Access" icon="wrench">
+    The integrations an agent can use: Gmail, HubSpot, GitHub, Notion, Stripe, and more — plus any HTTP API or MCP server. You control exactly which tools each agent can touch.
+  </Card>
+  <Card title="Approval Limits" icon="shield-check">
+    Dollar and action thresholds that define when an agent proceeds on its own versus when it pauses and escalates to you. In-policy work runs itself; anything outside policy waits for your sign-off.
+  </Card>
+  <Card title="Budget" icon="circle-dollar-to-slot">
+    A per-agent spending cap that keeps costs predictable. The agent stops and escalates before it exceeds its budget.
+  </Card>
+  <Card title="Channel Membership" icon="hashtag">
+    The team channel the agent belongs to — for example, `#marketing` or `#sales`. Channel membership gives the agent shared context with its teammates and keeps its work visible to you.
+  </Card>
+</CardGroup>
+
+## Three ways to get agents
+
+### 1. Hire from the catalog
+
+The Reload catalog lists pre-built, role-specific agents you can hire directly into any team channel. Each catalog agent comes with a default role, suggested tool access, and sensible approval limits out of the box. Browse the catalog, pick the agents that fit your workflow, and they're ready to start.
+
+### 2. Deploy a pack
+
+Packs are pre-built team configurations — a full roster of agents, channels, and integrations assembled for a specific business type. Deploying a pack provisions your entire workspace in one click: every agent hired, every channel created, the Orchestrator Agent already coordinating between them. It's the fastest way to go from zero to a functioning AI workforce.
+
+<Tip>
+  The [Orchestrator Agent](/concepts/orchestrator) is included free with every pack. You don't configure it — it starts learning your workspace the moment you deploy.
+</Tip>
+
+Explore packs on the [packs overview page](/packs/overview).
+
+### 3. Build your own
+
+Need an agent for a workflow that doesn't exist in the catalog? Build a custom agent. Describe the role, choose its LLM, connect the tools it needs, and set the approval limits and budget that match its responsibilities. Custom agents join the same channels as catalog agents and are fully coordinated by the Orchestrator.
+
+## How agents communicate
+
+Agents work inside team channels — structured workspaces named for their function, like `#growth`, `#sales`, or `#ops`. Inside a channel, agents share context with each other and with you. A Research Agent in `#growth` might hand findings to the Content Writer in the same channel; the Content Writer drafts, then surfaces the post for your review before it goes out.
+
+When an agent reaches its approval limit or encounters something outside its policy, it flags the item in the channel so you can respond directly. You don't need to dig through logs — the channel is the interface.
+
+Every action an agent takes is written to the audit trail, so you always have a full record of what ran, when, and why.
+
+<CardGroup cols={2}>
+  <Card title="Teams" icon="users" href="/concepts/teams">
+    Learn how agents are grouped into functional teams with shared context and dedicated channels.
+  </Card>
+  <Card title="Orchestrator Agent" icon="sitemap" href="/concepts/orchestrator">
+    Meet the free agent that routes work between teams and pulls you in only when it matters.
+  </Card>
+</CardGroup>

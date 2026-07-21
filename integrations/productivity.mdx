@@ -1,0 +1,76 @@
+---
+title: "Productivity Integrations: Notion, Slack, Google Workspace"
+sidebarTitle: "Productivity"
+description: "Connect Notion, Slack, Google Drive, and Google Calendar to let Reload agents manage docs, messages, files, and schedules on your behalf."
+---
+
+Productivity integrations give Reload agents the ability to work inside the tools your team uses every day. Whether you need a Research Agent drafting notes in Notion, a Content Writer organizing files in Google Drive, or an Executive Assistant scheduling meetings in Google Calendar, these connections let agents handle the operational overhead so your team can focus on higher-value work.
+
+## Tools
+
+<Tabs>
+  <Tab title="Notion">
+    Notion is the hub for team knowledge, documentation, and databases. Reload agents can read and write across your Notion workspace, making it easy to automate research summaries, content drafts, and project tracking.
+
+    **What agents can do:**
+    - Read and write pages and nested page hierarchies
+    - Create new documents from templates or scratch
+    - Update database entries, properties, and views
+    - Search across your workspace for relevant context
+
+    **Agents that use Notion:**
+    - Research Agent — saves research findings and summaries directly to Notion pages
+    - Content Writer — drafts and publishes long-form content to your content database
+    - Product Manager Agent — creates and updates project specs, roadmap entries, and meeting notes
+
+    **Connection method:** OAuth. Click **Connect Notion** in Settings → Integrations, then authorize Reload to access the pages and databases you select.
+  </Tab>
+  <Tab title="Slack">
+    Slack is the real-time communication layer for your team. Reload agents use Slack to report on completed tasks, surface issues that need human attention, and coordinate across channels — keeping everyone informed without requiring manual status updates.
+
+    **What agents can do:**
+    - Post messages to public and private channels
+    - Read channel history for context and instructions
+    - Send direct messages to specific team members
+    - Create new channels when organizing a project or campaign
+
+    **Agents that use Slack:**
+    - All team agents use Slack for status reporting and coordination
+    - The Orchestrator Agent uses Slack as its primary channel for surfacing escalations and decisions that need human input
+
+    **Connection method:** OAuth. Click **Connect Slack** in Settings → Integrations and authorize Reload for your workspace. You can restrict access to specific channels after connecting.
+  </Tab>
+  <Tab title="Google Drive">
+    Google Drive gives agents access to your team's file storage so they can read, create, and organize documents, spreadsheets, and presentations without requiring manual file management.
+
+    **What agents can do:**
+    - Read existing files and extract content for context
+    - Create new Google Docs and Sheets
+    - Write and update file content
+    - Organize files into folders and shared drives
+
+    **Agents that use Google Drive:**
+    - Content Writer — creates and organizes content drafts in shared Drive folders
+    - Executive Assistant Agent — manages documents, meeting briefs, and reference materials
+
+    **Connection method:** OAuth. Click **Connect Google Drive** in Settings → Integrations and sign in with the Google account whose Drive you want to connect.
+  </Tab>
+  <Tab title="Google Calendar">
+    Google Calendar lets agents manage your schedule directly — reading your availability, creating events, and sending invites — so you spend less time on scheduling logistics.
+
+    **What agents can do:**
+    - Read calendar events and check availability across calendars
+    - Create new events with titles, descriptions, and attendees
+    - Update or reschedule existing events
+    - Send calendar invites to internal and external participants
+
+    **Agents that use Google Calendar:**
+    - Executive Assistant Agent — handles all calendar management, from scheduling meetings to sending invites and resolving conflicts
+
+    **Connection method:** OAuth. Click **Connect Google Calendar** in Settings → Integrations and authorize access to the Google account you use for scheduling.
+  </Tab>
+</Tabs>
+
+<Tip>
+  Slack is the coordination layer that ties all your agents together. The Orchestrator Agent actively monitors your Slack channels to report task status, surface blockers, and escalate decisions that require human input — making it the fastest way to stay in the loop without checking dashboards manually.
+</Tip>

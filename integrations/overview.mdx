@@ -1,0 +1,53 @@
+---
+title: "Integrations: Connect Your Tools to Reload Agents"
+sidebarTitle: "Overview"
+description: "Connect Reload agents to the tools you already use — Notion, Slack, Gmail, HubSpot, GitHub, Stripe, and more — to automate real work across every function."
+---
+
+Integrations are how Reload agents take action in the real world. Rather than operating in isolation, your agents connect directly to the tools your team already relies on — reading data, writing content, sending messages, and updating records on your behalf. Every integration you enable extends what agents can do, turning automated reasoning into tangible outcomes across productivity, sales, engineering, and finance.
+
+## Integration categories
+
+<CardGroup cols={2}>
+  <Card title="Productivity" icon="briefcase" href="/integrations/productivity">
+    Notion, Slack, Google Drive, and Google Calendar — manage docs, messages, files, and schedules.
+  </Card>
+  <Card title="CRM & Sales" icon="chart-line" href="/integrations/crm-sales">
+    HubSpot and Gmail — run your pipeline, prospect for leads, and automate outbound.
+  </Card>
+  <Card title="Engineering" icon="code" href="/integrations/engineering">
+    GitHub and Linear — review PRs, file tickets, and keep your engineering workflow moving.
+  </Card>
+  <Card title="Finance" icon="credit-card" href="/integrations/finance">
+    Stripe — track payments, reconcile transactions, and manage invoices automatically.
+  </Card>
+</CardGroup>
+
+## Connecting an integration
+
+Most integrations take under two minutes to set up. After connecting a tool, you assign it to one or more agents using Tool Scopes, which control exactly what each agent is allowed to do.
+
+<Steps>
+  <Step title="Go to Settings → Integrations">
+    Open your workspace settings and navigate to the Integrations tab. You'll see all available tools grouped by category.
+  </Step>
+  <Step title="Select the tool you want to connect">
+    Click on the integration you want to enable. Each tool page shows which agents can use it and what actions they can perform.
+  </Step>
+  <Step title="Authorize access">
+    Most tools connect via OAuth — click **Connect** and follow the prompts in your browser. For tools that use API keys, paste your key directly into the field provided.
+  </Step>
+  <Step title="Assign to agents via Tool Scopes">
+    Once connected, assign the integration to one or more agents and configure the Tool Scopes to allow or restrict specific actions, such as read-only access or permission to send emails.
+  </Step>
+</Steps>
+
+## Data privacy
+
+<Note>
+  Every integration connection is sandboxed to your workspace. Reload never uses data from your connected tools to train models — your files, emails, contacts, and code remain private to your team.
+</Note>
+
+<Warning>
+  Removing an integration immediately revokes all agent access to that tool. Any in-progress tasks that depend on the integration will fail. Before disconnecting, check which agents are using the integration and pause them if needed.
+</Warning>

@@ -1,0 +1,76 @@
+---
+title: "Data Security and Privacy in Reload"
+sidebarTitle: "Data Security"
+description: "Reload runs agents on your own LLM keys, sandboxes every agent, and never uses your data for model training — your workspace stays fully under your control."
+---
+
+Reload is designed so that the data your agents work with stays yours — not ours. Agents run on your own model keys, workspaces are isolated at the infrastructure level, and nothing you process through Reload is ever used to train models. This page explains how each of those protections works and what you control directly.
+
+## Your keys, your spend
+
+Reload uses a bring-your-own-key (BYOK) model for LLM access. You connect your own API keys from Anthropic (Claude), OpenAI (Codex), or Google (Gemini), and every agent in your workspace calls those models using your credentials.
+
+That means:
+
+- **AI spend sits on your bill at provider rates** — you pay the model provider directly, at whatever rate your account carries.
+- **No token markup from Reload** — Reload doesn't add a margin on top of model usage; you see exactly what the provider charges.
+- **Reload never sees your model bill** — because agents call your keys directly, Reload has no visibility into your usage volume or costs.
+
+You keep the billing relationship with your model provider. Reload is the coordination and governance layer on top of it.
+
+## No training on your data
+
+Your workspace data — including agent memory, conversation history, and tool connection data — belongs to your organization. Reload does not use any of it for model training, fine-tuning, or product improvement.
+
+Specific protections:
+
+- **Workspace content is never shared** with model providers for training purposes
+- **Memory is scoped to your workspace** and not accessible to other Reload customers or to Reload staff in normal operations
+- **You can wipe a connection at any time** — if you disconnect a tool integration, the associated credentials and cached data are removed
+
+## Sandboxed agent execution
+
+Every agent in Reload runs in its own isolated sandbox. Agents have no ambient access to resources outside their configured tool scopes — they can only interact with what you've explicitly granted them.
+
+At the infrastructure level:
+
+- **Database-layer isolation**: Each workspace's data is isolated at the database layer, not just at the application layer. A misconfigured agent or unexpected failure in one workspace cannot read or write data from another.
+- **Failing closed**: If something goes wrong during agent execution, the system fails closed — the agent stops rather than continuing with unpredictable behavior or escalated access.
+
+## Data you control
+
+<CardGroup cols={1}>
+  <Card title="Tool connection data" icon="plug">
+    Credentials and tokens for connected tools are stored encrypted and are never shared with third parties. You can revoke and delete any connection at any time from your workspace settings.
+  </Card>
+  <Card title="Agent memory" icon="brain">
+    Memory is scoped to your workspace and not used outside it. You can delete individual memory entries or initiate a full workspace wipe by contacting support.
+  </Card>
+  <Card title="Audit logs" icon="list-check">
+    Every message, tool call, and approval decision is logged and available for export. Logs are yours to retain, forward to your SIEM, or provide directly to auditors.
+  </Card>
+</CardGroup>
+
+## Compliance status
+
+- **SOC 2 audit in progress**: Reload is currently undergoing a SOC 2 audit. Enterprise customers can request information about current security controls and timelines.
+- **Full audit trail**: Every agent action is logged with who initiated it, what was done, and why — exportable in formats your auditors can use.
+- **Data handling**: Reload's data handling practices are described in the Reload Privacy Policy. Enterprise customers can request a dedicated data processing agreement (DPA).
+
+<Note>
+  Enterprise customers can request a security review with the Reload team to walk through sandbox architecture, data handling, encryption practices, and compliance documentation. Contact [sales@reload.work](mailto:sales@reload.work) to schedule a review.
+</Note>
+
+## Frequently asked questions
+
+<Accordion title="Does Reload have access to my LLM prompts?">
+  No. Agents call your LLM API keys directly, so the raw prompts your agents send to the model provider go from Reload's infrastructure to your model provider using your credentials. Reload logs tool calls, action outputs, and message-level activity within the platform, but does not log or store the raw prompt payloads sent to your model provider.
+</Accordion>
+
+<Accordion title="Can I delete my workspace data?">
+  Yes. You can delete individual tool connections, agent memory entries, and other workspace content from your settings at any time. To initiate a full workspace wipe — including all memory, connections, and logs — contact Reload support and the team will process the request.
+</Accordion>
+
+<Accordion title="Where is data stored?">
+  Contact [sales@reload.work](mailto:sales@reload.work) for information about data residency options on enterprise plans. Reload can discuss regional storage requirements as part of the enterprise onboarding process.
+</Accordion>

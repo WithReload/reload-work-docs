@@ -1,0 +1,42 @@
+---
+title: "Finance Integration: Stripe for Payments and Billing"
+sidebarTitle: "Finance"
+description: "Connect Stripe to let Reload's Bookkeeping Agent track payments, issue invoices, reconcile transactions, and flag overdue accounts automatically."
+---
+
+Managing finances manually — reconciling transactions, chasing overdue invoices, categorizing expenses — is time-consuming and error-prone. By connecting Stripe to Reload, your Bookkeeping Agent gains real-time access to your payment data and can handle these tasks automatically, giving you accurate financial records without the administrative overhead.
+
+## What the Bookkeeping Agent can do with Stripe
+
+Once Stripe is connected and the Bookkeeping Agent's Tool Scopes are configured, it can take on the following tasks:
+
+- **Read transaction history and reconcile with expenses** — the agent reviews your Stripe transaction log and matches payments against your recorded expenses to identify discrepancies
+- **Create and send invoices to customers** — the agent generates Stripe invoices based on your input and sends them directly to customers, including due dates and payment links
+- **Track payment status and flag overdue accounts** — the agent monitors outstanding invoices and alerts you when payments are late, so you can follow up before accounts become a problem
+- **Categorize expenses automatically** — the agent assigns categories to incoming and outgoing transactions based on your chart of accounts, reducing the time you spend on manual bookkeeping
+- **Generate financial summaries on demand** — ask the agent for a weekly revenue summary, a breakdown of unpaid invoices, or a month-over-month comparison, and it pulls the data directly from Stripe
+
+## Connecting Stripe
+
+<Steps>
+  <Step title="Go to Settings → Integrations → Stripe">
+    Open your workspace settings, navigate to the Integrations tab, and click on **Stripe** in the Finance section.
+  </Step>
+  <Step title="Click Connect with Stripe">
+    Click the **Connect with Stripe** button. You'll be redirected to Stripe's authorization page in your browser.
+  </Step>
+  <Step title="Authorize with your Stripe credentials">
+    Sign in to Stripe and select the account you want to connect. If your organization has multiple Stripe accounts, choose the one that contains the transaction data you want the agent to access. Click **Authorize Access** to complete the connection.
+  </Step>
+  <Step title="Set Tool Scopes for the Bookkeeping Agent">
+    Back in Reload, navigate to Settings → Agents → Bookkeeping Agent → Tool Scopes. Configure the Stripe scopes based on what you want the agent to do. The recommended starting configuration is **Read transactions** and **Create invoices**. Enable additional scopes only as needed.
+  </Step>
+</Steps>
+
+<Warning>
+  Limit the Bookkeeping Agent to read-only Stripe access by default. Enable invoice creation only when you're confident in the agent's outputs and have reviewed a few test invoices manually. Stripe invoices are sent directly to customers — mistakes are difficult to reverse and can damage customer trust.
+</Warning>
+
+<Note>
+  The Legal & Compliance Agent also reads Stripe data when connected. It uses transaction history to track contract values, monitor subscription changes, and flag upcoming renewal dates — helping your legal and finance teams stay aligned on customer commitments without manual cross-referencing.
+</Note>
